@@ -1,7 +1,15 @@
 'use strict';
 
-jest.unmock('../userkeys');
+jest.disableAutomock();
+
+// jest.unmock('../userkeys');
+// jest.unmock('../../actions/userkeys');
+
 import userkeys from '../userkeys';
+import {
+    addUserkey,
+    removeUserkey
+} from '../../actions'
 
 describe('userkeys reducer', () => {
 
@@ -11,15 +19,8 @@ describe('userkeys reducer', () => {
 
     it('add new userkey', () => {
         let state = [];
-
-        const action = {
-            type:'ADD_USERKEY',
-            id: 0,
-            name: 'new userkey',
-            key: 'some password',
-            isNumerical: false,
-            iconType: 0
-        };
+        console.log(addUserkey);
+        var action = addUserkey(0, 'new userkey', 'some password', false, 0);
         
         expect(userkeys(state, action)).toEqual([{
             id: 0,
@@ -42,10 +43,7 @@ describe('userkeys reducer', () => {
             name: 'userkey 2'
         }];
 
-        const action = {
-            type:'REMOVE_USERKEY',
-            id: 1
-        };
+        const action = removeUserkey(1);
         
         expect(userkeys(state, action)).toEqual([{
             id:0,

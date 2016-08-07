@@ -7,7 +7,7 @@ import {
     View
 } from 'react-native';
 
-class Userkey extends Component {
+class UserkeyCard extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -28,4 +28,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default Userkey;
+export default UserkeyCard;

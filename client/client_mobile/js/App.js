@@ -5,12 +5,12 @@ import {
     View
 } from 'react-native';
 
-import UserkeysView from './components/UserkeysView';
+import AppNavigator from './AppNavigator';
 
 class App extends Component {
     render() {
         return (
-            <UserkeysView />
+            <AppNavigator />
         );
     }
 }

@@ -4,17 +4,18 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View
+    View,
+    TouchableHighlight
 } from 'react-native';
 
 class UserkeyCard extends Component {
     render() {
         return (
-            <View style={styles.container}>
+            <TouchableHighlight onPress={this.props.onPress}>
                 <Text style={styles.text}>
                     {this.props.userkey.name}
                 </Text>
-            </View>
+            </TouchableHighlight>
         );
     }
 }

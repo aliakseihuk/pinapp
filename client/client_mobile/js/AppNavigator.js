@@ -9,6 +9,7 @@ import {
 
 import UserkeysControl from './components/UserkeysControl';
 import AddUserkeyControl from './components/AddUserkeyControl';
+import CheckUserkeyControl from './components/CheckUserkeyControl';
 
 export default class AppNavigator extends Component {
     render() {
@@ -42,7 +43,9 @@ export default class AppNavigator extends Component {
     }
 
     _renderScene(route, navigator) {
-        if (route.routeKey === 'adduserkeycontrol') {
+        if (route.routeKey === 'checkuserkeycontrol') {
+            return <CheckUserkeyControl navigator={navigator} />
+        } else if (route.routeKey === 'adduserkeycontrol') {
             return <AddUserkeyControl navigator={navigator} />
         }
         return <UserkeysControl navigator={navigator} />;

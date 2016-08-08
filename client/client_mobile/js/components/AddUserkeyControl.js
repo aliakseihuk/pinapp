@@ -59,7 +59,7 @@ class AddUserkeyControl extends Component {
     }
 
     _onAddPress() {
-        this.props.addUserkey(Math.random()*10000, this.props.name, this.props.password, this.props.isNumerical, 0);
+        this.props.addUserkey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
         this.props.clearFields();
         this.props.navigator.pop({});
     }

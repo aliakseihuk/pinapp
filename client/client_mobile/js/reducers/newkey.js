@@ -5,7 +5,7 @@ import {
     CHANGE_PASSWORD,
     SWITCH_SHOW_SYMBOLS,
     SWITCH_IS_NUMERICAL,
-    CLEAR_FIELDS
+    CLEAR_NEW
 } from '../actions'
 
 const initialState = {
@@ -38,7 +38,7 @@ export default (state = initialState, action) => {
                 ...state,
                 isNumerical: !state.isNumerical
             };
-        case CLEAR_FIELDS:
+        case CLEAR_NEW:
             state = initialState;
             return state;
         default:

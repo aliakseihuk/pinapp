@@ -17,7 +17,7 @@ import {
     changePassword,
     switchShowSymbols,
     switchIsNumerical,
-    clearFields,
+    clearNew,
     addKey
 } from '../actions';
 
@@ -60,7 +60,7 @@ class NewKeyControl extends Component {
 
     _onAddPress() {
         this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
-        this.props.clearFields();
+        this.props.clearNew();
         this.props.navigator.pop({});
     }
 }
@@ -92,7 +92,7 @@ const dispatchToProps = (dispatch) => {
         changePassword,
         switchShowSymbols,
         switchIsNumerical,
-        clearFields,
+        clearNew,
         addKey
     }, dispatch)
 };

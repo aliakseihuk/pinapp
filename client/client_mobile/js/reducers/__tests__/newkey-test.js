@@ -8,7 +8,7 @@ import {
     switchIsNumerical,
     changeName,
     changePassword,
-    clearFields
+    clearNew
 } from '../../actions'
 
 describe('newKey reducer', () => {
@@ -63,7 +63,7 @@ describe('newKey reducer', () => {
             isNumerical: true,
             iconType: 0,
         };
-        const action = clearFields();
+        const action = clearNew();
         
         expect(newKey(state, action)).toEqual({
             name: '',

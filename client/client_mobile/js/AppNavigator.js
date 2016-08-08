@@ -2,7 +2,9 @@
 
 import React, { Component } from 'react';
 import {
-    Navigator
+    Text,
+    Navigator,
+    TouchableHighlight
 } from 'react-native';
 
 import UserkeysControl from './components/UserkeysControl';
@@ -13,17 +15,37 @@ export default class AppNavigator extends Component {
         return (
             <Navigator
                 ref="navigator"
-                initialRoute={{routeKey: 'userkeyscontrol'}}
+                initialRoute={{ routeKey: 'userkeyscontrol' }}
                 renderScene={this._renderScene}
+                navigationBar={
+                    <Navigator.NavigationBar
+                        routeMapper={{
+                            LeftButton: (route, navigator, index, navState) => {
+                                if (index != 0)
+                                    return (
+                                        <TouchableHighlight onPress={() => navigator.pop()}>
+                                            <Text>Back</Text>
+                                        </TouchableHighlight>
+                                    );
+                            },
+                            RightButton: (route, navigator, index, navState) => { 
+                                return null;
+                            },
+                            Title: (route, navigator, index, navState) => { 
+                                return (<Text>Pin App</Text>);
+                            }
+                        }}
+                    />
+                }
             />
         );
     }
 
-    _renderScene(route, navigator)  {
-        if(route.routeKey === 'adduserkeycontrol') {
+    _renderScene(route, navigator) {
+        if (route.routeKey === 'adduserkeycontrol') {
             return <AddUserkeyControl navigator={navigator} />
         }
         return <UserkeysControl navigator={navigator} />;
     }
-}
+};
 

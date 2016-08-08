@@ -2,9 +2,6 @@
 
 jest.disableAutomock();
 
-// jest.unmock('../userkeys');
-// jest.unmock('../../actions/userkeys');
-
 import userkeys from '../userkeys';
 import {
     addUserkey,
@@ -19,7 +16,7 @@ describe('userkeys reducer', () => {
 
     it('add new userkey', () => {
         let state = [];
-        console.log(addUserkey);
+        
         var action = addUserkey(0, 'new userkey', 'some password', false, 0);
         
         expect(userkeys(state, action)).toEqual([{

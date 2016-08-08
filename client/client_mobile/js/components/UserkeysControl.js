@@ -7,7 +7,7 @@ import {
     View,
     TouchableHighlight
 } from 'react-native';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
 
 import UserkeyCard from './UserkeyCard';
 

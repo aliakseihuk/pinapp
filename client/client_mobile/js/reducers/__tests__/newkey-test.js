@@ -2,16 +2,16 @@
 
 jest.disableAutomock();
 
-import newKey from '../newKey.js';
+import newKey from '../newkey.js';
 import {
     switchShowSymbols,
     switchIsNumerical,
-    changeName,
-    changePassword,
+    changeNewName,
+    changeNewPassword,
     clearNew
 } from '../../actions'
 
-describe('newKey reducer', () => {
+describe('newkey reducer', () => {
 
     it('switch show symbols', () => {
         var action = switchShowSymbols();
@@ -39,7 +39,7 @@ describe('newKey reducer', () => {
 
     it('change new key name', () => {
         let state = { name: 'from the first name'};
-        const action = changeName('to the second name');
+        const action = changeNewName('to the second name');
         
         expect(newKey(state, action)).toEqual({
             name: 'to the second name'
@@ -48,7 +48,7 @@ describe('newKey reducer', () => {
 
     it('change new key password', () => {
         let state = { password: 'password'};
-        const action = changePassword('very secure password');
+        const action = changeNewPassword('very secure password');
         
         expect(newKey(state, action)).toEqual({
             password: 'very secure password'

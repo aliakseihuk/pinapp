@@ -14,7 +14,7 @@ import KeyCard from './KeyCard';
 class KeysControl extends Component {
     render() {
         let keys = this.props.keys.map((key) => (
-            <KeyCard key={key.id} userkey={key} onPress={this._onKeyPress.bind(this)}/>
+            <KeyCard key={key.id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this)}/>
         ));
         return (
             <View style={styles.container}>
@@ -30,8 +30,8 @@ class KeysControl extends Component {
         this.props.navigator.push({routeKey: 'newkeycontrol'});
     }
 
-    _onKeyPress() {
-        this.props.navigator.push({routeKey: 'checkkeycontrol'});
+    _onKeyPress(keyObject) {
+        this.props.navigator.push({routeKey: 'checkkeycontrol', keyObject: keyObject});
     }
 }
 

@@ -11,8 +11,11 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
-// import {
-// } from '../actions';
+import {
+    checkPassword,
+    changeCheckPassword,
+    clearCheck
+} from '../actions';
 
 class CheckKeyControl extends Component {
     render() {
@@ -21,11 +24,13 @@ class CheckKeyControl extends Component {
                 
                 <TextInput
                     style={styles.input}
-                    value={this.props.name}
-                    onChangeText={(value) => this.props.changeName(value)}
-                    placeholder='Key name'/>
+                    value={this.props.password}
+                    onChangeText={(password) => this.props.changeCheckPassword(password)}
+                    placeholder='Key password'/>
 
-                <TouchableHighlight onPress={this._onAddPress}>
+                <Text>Is verified: {this.props.isVerified.toString()}</Text>
+
+                <TouchableHighlight onPress={this._onCheckPress.bind(this)}>
                     <Text>
                         Check
                     </Text>
@@ -35,7 +40,7 @@ class CheckKeyControl extends Component {
     }
 
     _onCheckPress() {
-
+        this.props.checkPassword(this.props.password, this.props.keyObject);
     }
 }
 
@@ -51,15 +56,19 @@ const styles = StyleSheet.create({
     }
 });
 
-// const stateToProps = (state) => {
-//     return {
-//     }
-// };
+const stateToProps = (state) => {
+    return {
+        password: state.checkKey.password,
+        isVerified: state.checkKey.isVerified
+    }
+};
 
-// const dispatchToProps = (dispatch) => {
-//     return bindActionCreators({
-//     }, dispatch)
-// };
+const dispatchToProps = (dispatch) => {
+    return bindActionCreators({
+        checkPassword,
+        changeCheckPassword,
+        clearCheck
+    }, dispatch)
+};
 
-//export default connect(stateToProps, dispatchToProps)(CheckKeyControl);
-export default CheckKeyControl;
+export default connect(stateToProps, dispatchToProps)(CheckKeyControl);

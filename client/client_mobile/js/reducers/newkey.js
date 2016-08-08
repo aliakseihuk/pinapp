@@ -1,12 +1,12 @@
 'use strict';
 
 import {
-    CHANGE_NAME,
-    CHANGE_PASSWORD,
+    CHANGE_NEW_NAME,
+    CHANGE_NEW_PASSWORD,
     SWITCH_SHOW_SYMBOLS,
     SWITCH_IS_NUMERICAL,
     CLEAR_NEW
-} from '../actions'
+} from '../actions';
 
 const initialState = {
     name: '',
@@ -18,12 +18,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        case CHANGE_NAME:
+        case CHANGE_NEW_NAME:
             return {
                 ...state,
                 name: action.name
             };
-        case CHANGE_PASSWORD:
+        case CHANGE_NEW_PASSWORD:
             return {
                 ...state,
                 password: action.password

@@ -3,21 +3,19 @@
 import {
     ADD_KEY,
     REMOVE_KEY
-} from '../actions'
+} from '../actions';
+
+import key from './key';
 
 export default (state = [], action) => {
     switch (action.type) {
         case ADD_KEY:
-            const hash = action.key
-            return [...state, {
-                id: action.id,
-                name: action.name,
-                hash: hash,
-                isNumerical: action.isNumerical,
-                iconType: action.iconType
-            }];
+            return [
+                ...state,
+                key(undefined, action)
+            ];
         case REMOVE_KEY:
-            return state.filter(uk => uk.id != action.id);
+            return state.filter(k => k.id != action.id);
         default:
             return state;
     }

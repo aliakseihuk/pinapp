@@ -44,7 +44,7 @@ export default class AppNavigator extends Component {
 
     _renderScene(route, navigator) {
         if (route.routeKey === 'checkkeycontrol') {
-            return <CheckKeyControl navigator={navigator} />
+            return <CheckKeyControl navigator={navigator} keyObject={route.keyObject}/>
         } else if (route.routeKey === 'newkeycontrol') {
             return <NewKeyControl navigator={navigator} />
         }

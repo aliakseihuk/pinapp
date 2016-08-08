@@ -13,8 +13,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
 import {
-    changeName,
-    changePassword,
+    changeNewName,
+    changeNewPassword,
     switchShowSymbols,
     switchIsNumerical,
     clearNew,
@@ -33,12 +33,13 @@ class NewKeyControl extends Component {
                 <TextInput
                     style={styles.input}
                     value={this.props.name}
-                    onChangeText={(value) => this.props.changeName(value)}
+                    onChangeText={(value) => this.props.changeNewName(value)}
                     placeholder='Key name'/>
                 <TextInput
                     style={styles.input}
+                    value={this.props.password}
                     placeholder='Key password'
-                    onChangeText={(value) => this.props.changePassword(value)}
+                    onChangeText={(value) => this.props.changeNewPassword(value)}
                     secureTextEntry={!this.props.showSymbols}/>
                 <Text>Show symbols</Text>
                 <Switch
@@ -88,8 +89,8 @@ const stateToProps = (state) => {
 
 const dispatchToProps = (dispatch) => {
     return bindActionCreators({
-        changeName,
-        changePassword,
+        changeNewName,
+        changeNewPassword,
         switchShowSymbols,
         switchIsNumerical,
         clearNew,

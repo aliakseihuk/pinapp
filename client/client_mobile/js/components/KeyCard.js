@@ -8,7 +8,7 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-class UserkeyCard extends Component {
+class KeyCard extends Component {
     render() {
         return (
             <TouchableHighlight onPress={this.props.onPress}>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
     }
 });
 
-export default UserkeyCard;
+export default KeyCard;

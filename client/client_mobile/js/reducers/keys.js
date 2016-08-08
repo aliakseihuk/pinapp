@@ -1,13 +1,13 @@
 'use strict';
 
 import {
-    ADD_USERKEY,
-    REMOVE_USERKEY
+    ADD_KEY,
+    REMOVE_KEY
 } from '../actions'
 
 export default (state = [], action) => {
     switch (action.type) {
-        case ADD_USERKEY:
+        case ADD_KEY:
             const hash = action.key
             return [...state, {
                 id: action.id,
@@ -16,7 +16,7 @@ export default (state = [], action) => {
                 isNumerical: action.isNumerical,
                 iconType: action.iconType
             }];
-        case REMOVE_USERKEY:
+        case REMOVE_KEY:
             return state.filter(uk => uk.id != action.id);
         default:
             return state;

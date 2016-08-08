@@ -18,10 +18,10 @@ import {
     switchShowSymbols,
     switchIsNumerical,
     clearFields,
-    addUserkey
+    addKey
 } from '../actions';
 
-class AddUserkeyControl extends Component {
+class NewKeyControl extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -34,10 +34,10 @@ class AddUserkeyControl extends Component {
                     style={styles.input}
                     value={this.props.name}
                     onChangeText={(value) => this.props.changeName(value)}
-                    placeholder='Userkey name'/>
+                    placeholder='Key name'/>
                 <TextInput
                     style={styles.input}
-                    placeholder='Userkey password'
+                    placeholder='Key password'
                     onChangeText={(value) => this.props.changePassword(value)}
                     secureTextEntry={!this.props.showSymbols}/>
                 <Text>Show symbols</Text>
@@ -51,7 +51,7 @@ class AddUserkeyControl extends Component {
 
                 <TouchableHighlight onPress={this._onAddPress.bind(this)}>
                     <Text>
-                        Add new userkey
+                        Add a new key
                     </Text>
                 </TouchableHighlight>       
             </View>
@@ -59,7 +59,7 @@ class AddUserkeyControl extends Component {
     }
 
     _onAddPress() {
-        this.props.addUserkey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
+        this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
         this.props.clearFields();
         this.props.navigator.pop({});
     }
@@ -79,10 +79,10 @@ const styles = StyleSheet.create({
 
 const stateToProps = (state) => {
     return {
-        name: state.newUserkey.name,
-        password: state.newUserkey.password,
-        showSymbols: state.newUserkey.showSymbols,
-        isNumerical: state.newUserkey.isNumerical,
+        name: state.newKey.name,
+        password: state.newKey.password,
+        showSymbols: state.newKey.showSymbols,
+        isNumerical: state.newKey.isNumerical,
     }
 };
 
@@ -93,8 +93,8 @@ const dispatchToProps = (dispatch) => {
         switchShowSymbols,
         switchIsNumerical,
         clearFields,
-        addUserkey
+        addKey
     }, dispatch)
 };
 
-export default connect(stateToProps, dispatchToProps)(AddUserkeyControl);
+export default connect(stateToProps, dispatchToProps)(NewKeyControl);

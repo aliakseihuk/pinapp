@@ -14,7 +14,7 @@ import { bindActionCreators } from 'redux'
 // import {
 // } from '../actions';
 
-class CheckUserkeyControl extends Component {
+class CheckKeyControl extends Component {
     render() {
         return (
             <View style={styles.container}>
@@ -23,7 +23,7 @@ class CheckUserkeyControl extends Component {
                     style={styles.input}
                     value={this.props.name}
                     onChangeText={(value) => this.props.changeName(value)}
-                    placeholder='Userkey name'/>
+                    placeholder='Key name'/>
 
                 <TouchableHighlight onPress={this._onAddPress}>
                     <Text>
@@ -61,5 +61,5 @@ const styles = StyleSheet.create({
 //     }, dispatch)
 // };
 
-//export default connect(stateToProps, dispatchToProps)(CheckUserkeyControl);
-export default CheckUserkeyControl;
+//export default connect(stateToProps, dispatchToProps)(CheckKeyControl);
+export default CheckKeyControl;

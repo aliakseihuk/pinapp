@@ -9,29 +9,29 @@ import {
 } from 'react-native';
 import { connect } from 'react-redux';
 
-import UserkeyCard from './UserkeyCard';
+import KeyCard from './KeyCard';
 
-class UserkeysControl extends Component {
+class KeysControl extends Component {
     render() {
-        let keys = this.props.userkeys.map((userkey) => (
-            <UserkeyCard key={userkey.id} userkey={userkey} onPress={this._onUserkeyPress.bind(this)}/>
+        let keys = this.props.keys.map((key) => (
+            <KeyCard key={key.id} userkey={key} onPress={this._onKeyPress.bind(this)}/>
         ));
         return (
             <View style={styles.container}>
                 {keys}
                 <TouchableHighlight onPress={this._onAddNewPress.bind(this)}>
-                    <Text>Add new userkey</Text>
+                    <Text>Add new key</Text>
                 </TouchableHighlight>
             </View>
         );
     }
 
     _onAddNewPress() {
-        this.props.navigator.push({routeKey: 'adduserkeycontrol'});
+        this.props.navigator.push({routeKey: 'newkeycontrol'});
     }
 
-    _onUserkeyPress() {
-        this.props.navigator.push({routeKey: 'checkuserkeycontrol'});
+    _onKeyPress() {
+        this.props.navigator.push({routeKey: 'checkkeycontrol'});
     }
 }
 
@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
 
 const stateToProps = (state) => {
     return {
-        userkeys: state.userkeys
+        keys: state.keys
     }
 };
 
-export default connect(stateToProps)(UserkeysControl);
+export default connect(stateToProps)(KeysControl);

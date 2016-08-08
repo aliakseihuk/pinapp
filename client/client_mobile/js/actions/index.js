@@ -1,4 +1,4 @@
 'use strict';
 
-export * from './userkeys';
-export * from './newUserkey';
+export * from './keys';
+export * from './newkey';

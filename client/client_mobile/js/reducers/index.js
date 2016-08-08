@@ -2,10 +2,10 @@
 
 import { combineReducers } from 'redux';
 
-import userkeys from './userkeys';
-import newUserkey from './newUserkey';
+import keys from './keys';
+import newKey from './newkey';
 
 export default combineReducers({
-    userkeys,
-    newUserkey
+    keys,
+    newKey
 });

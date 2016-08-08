@@ -7,16 +7,16 @@ import {
     TouchableHighlight
 } from 'react-native';
 
-import UserkeysControl from './components/UserkeysControl';
-import AddUserkeyControl from './components/AddUserkeyControl';
-import CheckUserkeyControl from './components/CheckUserkeyControl';
+import KeysControl from './components/KeysControl';
+import NewKeyControl from './components/NewKeyControl';
+import CheckKeyControl from './components/CheckKeyControl';
 
 export default class AppNavigator extends Component {
     render() {
         return (
             <Navigator
                 ref="navigator"
-                initialRoute={{ routeKey: 'userkeyscontrol' }}
+                initialRoute={{ routeKey: 'keyscontrol' }}
                 renderScene={this._renderScene}
                 navigationBar={
                     <Navigator.NavigationBar
@@ -43,12 +43,12 @@ export default class AppNavigator extends Component {
     }
 
     _renderScene(route, navigator) {
-        if (route.routeKey === 'checkuserkeycontrol') {
-            return <CheckUserkeyControl navigator={navigator} />
-        } else if (route.routeKey === 'adduserkeycontrol') {
-            return <AddUserkeyControl navigator={navigator} />
+        if (route.routeKey === 'checkkeycontrol') {
+            return <CheckKeyControl navigator={navigator} />
+        } else if (route.routeKey === 'newkeycontrol') {
+            return <NewKeyControl navigator={navigator} />
         }
-        return <UserkeysControl navigator={navigator} />;
+        return <KeysControl navigator={navigator} />;
     }
 };
 

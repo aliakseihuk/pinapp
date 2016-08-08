@@ -2,7 +2,7 @@
 
 jest.disableAutomock();
 
-import newUserkey from '../newUserkey.js';
+import newKey from '../newKey.js';
 import {
     switchShowSymbols,
     switchIsNumerical,
@@ -11,12 +11,12 @@ import {
     clearFields
 } from '../../actions'
 
-describe('newUserkey reducer', () => {
+describe('newKey reducer', () => {
 
     it('switch show symbols', () => {
         var action = switchShowSymbols();
         
-        expect(newUserkey(undefined, action)).toEqual({
+        expect(newKey(undefined, action)).toEqual({
             name: '',
             password: '',
             showSymbols: true,
@@ -28,7 +28,7 @@ describe('newUserkey reducer', () => {
     it('switch show symbols', () => {
         const action = switchIsNumerical();
         
-        expect(newUserkey(undefined, action)).toEqual({
+        expect(newKey(undefined, action)).toEqual({
             name: '',
             password: '',
             showSymbols: false,
@@ -37,25 +37,25 @@ describe('newUserkey reducer', () => {
         });
     });
 
-    it('change new userkey name', () => {
+    it('change new key name', () => {
         let state = { name: 'from the first name'};
         const action = changeName('to the second name');
         
-        expect(newUserkey(state, action)).toEqual({
+        expect(newKey(state, action)).toEqual({
             name: 'to the second name'
         });
     });
 
-    it('change new userkey password', () => {
+    it('change new key password', () => {
         let state = { password: 'password'};
         const action = changePassword('very secure password');
         
-        expect(newUserkey(state, action)).toEqual({
+        expect(newKey(state, action)).toEqual({
             password: 'very secure password'
         });
     });
 
-    it('clear new userkey fields', () => {
+    it('clear new key fields', () => {
         let state = {
             name: 'some name',
             password: 'some password',
@@ -65,7 +65,7 @@ describe('newUserkey reducer', () => {
         };
         const action = clearFields();
         
-        expect(newUserkey(state, action)).toEqual({
+        expect(newKey(state, action)).toEqual({
             name: '',
             password: '',
             showSymbols: false,

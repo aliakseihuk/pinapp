@@ -12,15 +12,11 @@ const initialState = {
 };
 
 export default (state = initialState, action) => {
-    console.log(action.type);
     switch (action.type) {
         case CHECK_PASSWORD:
-            const hash = action.key.hash
-            console.log('hash ' + hash);
-            console.log('password ' + action.password);
             return {
                 ...state,
-                isVerified: action.password === hash
+                isVerified: action.password === action.key.hash
             };
         case CHANGE_CHECK_PASSWORD:
             return {

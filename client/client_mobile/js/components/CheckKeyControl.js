@@ -9,12 +9,11 @@ import {
     TextInput,
 } from 'react-native';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
+import { bindActionCreators } from 'redux';
 
 import {
     checkPassword,
-    changeCheckPassword,
-    clearCheck
+    changeCheckPassword
 } from '../actions';
 
 class CheckKeyControl extends Component {
@@ -26,7 +25,8 @@ class CheckKeyControl extends Component {
                     style={styles.input}
                     value={this.props.password}
                     onChangeText={(password) => this.props.changeCheckPassword(password)}
-                    placeholder='Key password'/>
+                    placeholder='Password'
+                    secureTextEntry={true}/>
 
                 <Text>Is verified: {this.props.isVerified.toString()}</Text>
 
@@ -67,7 +67,6 @@ const dispatchToProps = (dispatch) => {
     return bindActionCreators({
         checkPassword,
         changeCheckPassword,
-        clearCheck
     }, dispatch)
 };
 

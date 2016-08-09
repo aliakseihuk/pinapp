@@ -8,8 +8,10 @@ import {
     TouchableHighlight
 } from 'react-native';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import KeyCard from './KeyCard';
+import { clearCheck } from '../actions';
 
 class KeysControl extends Component {
     render() {
@@ -31,6 +33,7 @@ class KeysControl extends Component {
     }
 
     _onKeyPress(keyObject) {
+        this.props.clearCheck();
         this.props.navigator.push({routeKey: 'checkkeycontrol', keyObject: keyObject});
     }
 }
@@ -50,4 +53,10 @@ const stateToProps = (state) => {
     }
 };
 
-export default connect(stateToProps)(KeysControl);
+const dispatchToProps = (dispatch) => {
+    return bindActionCreators({
+        clearCheck
+    }, dispatch)
+};
+
+export default connect(stateToProps, dispatchToProps)(KeysControl);

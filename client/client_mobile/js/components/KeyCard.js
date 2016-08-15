@@ -11,8 +11,8 @@ import {
 class KeyCard extends Component {
     render() {
         return (
-            <TouchableHighlight onPress={this.props.onPress}>
-                <Text style={styles.text}>
+            <TouchableHighlight style={styles.keyContainer} onPress={this.props.onPress}>
+                <Text style={styles.keyName}>
                     {this.props.userkey.name}
                 </Text>
             </TouchableHighlight>
@@ -21,11 +21,14 @@ class KeyCard extends Component {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        
+    keyContainer: {
+        borderColor: '#00B4CC',
+        borderBottomWidth: 1,
     },
-    text: {
-
+    keyName: {
+        fontSize: 37.93,
+        margin: 10,
+        color: '#005F6B'
     }
 });
 

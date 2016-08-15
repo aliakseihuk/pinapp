@@ -4,22 +4,25 @@ import React, { Component } from 'react';
 import {
     Text,
     Navigator,
-    TouchableHighlight
+    TouchableHighlight,
+    StyleSheet
 } from 'react-native';
 
 import KeysControl from './components/KeysControl';
 import NewKeyControl from './components/NewKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
 
-export default class AppNavigator extends Component {
+class AppNavigator extends Component {
     render() {
         return (
             <Navigator
+                style={styles.navigator}
                 ref="navigator"
                 initialRoute={{ routeKey: 'keyscontrol' }}
                 renderScene={this._renderScene}
                 navigationBar={
                     <Navigator.NavigationBar
+                        style={styles.navigatorBar}
                         routeMapper={{
                             LeftButton: (route, navigator, index, navState) => {
                                 if (index != 0)
@@ -51,4 +54,16 @@ export default class AppNavigator extends Component {
         return <KeysControl navigator={navigator} />;
     }
 };
+
+const styles = StyleSheet.create({
+    navigator: {
+        backgroundColor: '#00DFFC',
+    },
+    navigatorBar: {
+        borderBottomWidth: 1,
+        borderColor: '#00B4CC'
+    }
+});
+
+export default AppNavigator;
 

@@ -20,10 +20,14 @@ class KeysControl extends Component {
         ));
         return (
             <View style={styles.container}>
-                {keys}
-                <TouchableHighlight onPress={this._onAddNewPress.bind(this)}>
-                    <Text>Add new key</Text>
-                </TouchableHighlight>
+                <View style={styles.keys}>
+                    {keys}
+                </View>
+                <View style={styles.addNewContainer}>
+                    <TouchableHighlight style={styles.addNew} onPress={this._onAddNewPress.bind(this)}>
+                        <Text>Add new key</Text>
+                    </TouchableHighlight>
+                </View>
             </View>
         );
     }
@@ -41,9 +45,24 @@ class KeysControl extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: '#F5FCFF',
+        justifyContent: 'space-between',
+        alignItems: 'stretch',
+        marginTop: 65,
+    },
+    keys: {
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+    addNewContainer: {
+        alignItems: 'flex-end',
+        borderTopWidth: 1,
+        borderColor: '#00B4CC',
+        padding: 10,
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+    addNew: {
+        
     }
 });
 

@@ -1,5 +1,7 @@
 'use strict';
 
+import md5 from 'md5';
+
 import {
     CHECK_PASSWORD,
     CHANGE_CHECK_PASSWORD,
@@ -16,7 +18,7 @@ export default (state = initialState, action) => {
         case CHECK_PASSWORD:
             return {
                 ...state,
-                isVerified: action.password === action.key.hash
+                isVerified: md5(action.password) === action.key.hash
             };
         case CHANGE_CHECK_PASSWORD:
             return {

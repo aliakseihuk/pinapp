@@ -12,6 +12,8 @@ import {
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
+import NewKeyButton from './NewKeyButton';
+
 import {
     changeNewName,
     changeNewPassword,
@@ -25,41 +27,38 @@ class NewKeyControl extends Component {
     render() {
         return (
             <View style={styles.container}>
-                <TouchableHighlight>
-                    <Text>
-                        Icon
-                    </Text>
-                </TouchableHighlight>
-                <TextInput
-                    style={styles.input}
-                    value={this.props.name}
-                    onChangeText={(value) => this.props.changeNewName(value)}
-                    placeholder='Key name'/>
-                <TextInput
-                    style={styles.input}
-                    value={this.props.password}
-                    placeholder='Key password'
-                    onChangeText={(value) => this.props.changeNewPassword(value)}
-                    secureTextEntry={!this.props.showSymbols}/>
-                <Text>Show symbols</Text>
-                <Switch
-                    onValueChange={() => this.props.switchShowSymbols()}
-                    value={this.props.showSymbols} />
-                <Text>Is numerical</Text>
-                <Switch
-                    onValueChange={() => this.props.switchIsNumerical()}
-                    value={this.props.isNumerical} />
-
-                <TouchableHighlight onPress={this._onAddPress.bind(this)}>
-                    <Text>
-                        Add a new key
-                    </Text>
-                </TouchableHighlight>       
+                <View>
+                    <TouchableHighlight>
+                        <Text>
+                            Icon
+                        </Text>
+                    </TouchableHighlight>
+                    <TextInput
+                        style={styles.input}
+                        value={this.props.name}
+                        onChangeText={(value) => this.props.changeNewName(value)}
+                        placeholder='Key name'/>
+                    <TextInput
+                        style={styles.input}
+                        value={this.props.password}
+                        placeholder='Key password'
+                        onChangeText={(value) => this.props.changeNewPassword(value)}
+                        secureTextEntry={!this.props.showSymbols}/>
+                    <Text>Show symbols</Text>
+                    <Switch
+                        onValueChange={() => this.props.switchShowSymbols()}
+                        value={this.props.showSymbols} />
+                    <Text>Is numerical</Text>
+                    <Switch
+                        onValueChange={() => this.props.switchIsNumerical()}
+                        value={this.props.isNumerical} />       
+                </View>
+                <NewKeyButton onPress={this._onAddNewPress.bind(this)} /> 
             </View>
         );
     }
 
-    _onAddPress() {
+    _onAddNewPress() {
         this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
         this.props.clearNew();
         this.props.navigator.pop({});
@@ -69,8 +68,9 @@ class NewKeyControl extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'space-between',
+        alignItems: 'stretch',
+        marginTop: 65,
     },
     input: {
         height: 40, borderColor: 'gray', borderWidth: 1

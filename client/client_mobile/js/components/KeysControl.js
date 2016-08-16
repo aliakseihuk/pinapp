@@ -11,6 +11,8 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import KeyCard from './KeyCard';
+import NewKeyButton from './NewKeyButton';
+
 import { clearCheck } from '../actions';
 
 class KeysControl extends Component {
@@ -23,11 +25,7 @@ class KeysControl extends Component {
                 <View style={styles.keys}>
                     {keys}
                 </View>
-                <View style={styles.addNewContainer}>
-                    <TouchableHighlight style={styles.addNew} onPress={this._onAddNewPress.bind(this)}>
-                        <Text>Add new key</Text>
-                    </TouchableHighlight>
-                </View>
+                <NewKeyButton onPress={this._onAddNewPress.bind(this)} />
             </View>
         );
     }

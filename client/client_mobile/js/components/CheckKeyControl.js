@@ -12,7 +12,6 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import {
-    checkPassword,
     changeCheckPassword
 } from '../actions';
 
@@ -24,23 +23,13 @@ class CheckKeyControl extends Component {
                 <TextInput
                     style={styles.input}
                     value={this.props.password}
-                    onChangeText={(password) => this.props.changeCheckPassword(password)}
+                    onChangeText={(password) => this.props.changeCheckPassword(password, this.props.keyObject)}
                     placeholder='Password'
                     secureTextEntry={true}/>
 
-                <Text>Is verified: {this.props.isVerified.toString()}</Text>
-
-                <TouchableHighlight onPress={this._onCheckPress.bind(this)}>
-                    <Text>
-                        Check
-                    </Text>
-                </TouchableHighlight>       
+                <Text>Is verified: {this.props.isVerified.toString()}</Text>     
             </View>
         );
-    }
-
-    _onCheckPress() {
-        this.props.checkPassword(this.props.password, this.props.keyObject);
     }
 }
 
@@ -64,8 +53,7 @@ const stateToProps = (state) => {
 
 const dispatchToProps = (dispatch) => {
     return bindActionCreators({
-        checkPassword,
-        changeCheckPassword,
+        changeCheckPassword
     }, dispatch)
 };
 

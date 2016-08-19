@@ -50,17 +50,6 @@ const styles = StyleSheet.create({
     keys: {
         paddingLeft: 20,
         paddingRight: 20,
-    },
-    addNewContainer: {
-        alignItems: 'flex-end',
-        borderTopWidth: 1,
-        borderColor: '#00B4CC',
-        padding: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
-    },
-    addNew: {
-        
     }
 });
 

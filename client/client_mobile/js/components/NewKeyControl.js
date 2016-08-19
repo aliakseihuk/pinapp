@@ -6,13 +6,13 @@ import {
     Text,
     View,
     TouchableHighlight,
-    TextInput,
     Switch
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux'
 
 import NewKeyButton from './NewKeyButton';
+import KeyTextInput from './KeyTextInput';
 
 import {
     changeNewName,
@@ -33,17 +33,18 @@ class NewKeyControl extends Component {
                             Icon
                         </Text>
                     </TouchableHighlight>
-                    <TextInput
-                        style={styles.input}
+                    <KeyTextInput
                         value={this.props.name}
-                        onChangeText={(value) => this.props.changeNewName(value)}
-                        placeholder='Key name'/>
-                    <TextInput
-                        style={styles.input}
+                        onChangeText={(name) => this.props.changeNewName(name)}
+                        placeholder='name'
+                    />
+                    <KeyTextInput
                         value={this.props.password}
-                        placeholder='Key password'
-                        onChangeText={(value) => this.props.changeNewPassword(value)}
-                        secureTextEntry={!this.props.showSymbols}/>
+                        onChangeText={(password) => this.props.changeNewPassword(password)}
+                        isPassword={true}
+                        isNumeric = {this.props.isNumerical}
+                        showSymbols={this.props.showSymbols}
+                    />
                     <Text>Show symbols</Text>
                     <Switch
                         onValueChange={() => this.props.switchShowSymbols()}

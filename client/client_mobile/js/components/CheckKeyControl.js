@@ -4,12 +4,12 @@ import React, { Component } from 'react';
 import {
     StyleSheet,
     Text,
-    View,
-    TouchableHighlight,
-    TextInput,
+    View
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
+import KeyTextInput from './KeyTextInput';
 
 import {
     changeCheckPassword
@@ -19,13 +19,13 @@ class CheckKeyControl extends Component {
     render() {
         return (
             <View style={styles.container}>
-                
-                <TextInput
-                    style={styles.input}
+                <KeyTextInput
                     value={this.props.password}
                     onChangeText={(password) => this.props.changeCheckPassword(password, this.props.keyObject)}
-                    placeholder='Password'
-                    secureTextEntry={true}/>
+                    isPassword={true}
+                    isNumeric = {this.props.keyObject.isNumerical}
+                    autoFocus={true}
+                />
 
                 <Text>Is verified: {this.props.isVerified.toString()}</Text>     
             </View>
@@ -36,11 +36,7 @@ class CheckKeyControl extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-    input: {
-        height: 40, borderColor: 'gray', borderWidth: 1
+        marginTop: 100,
     }
 });
 

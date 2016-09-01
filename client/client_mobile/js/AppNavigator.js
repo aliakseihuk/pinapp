@@ -11,6 +11,7 @@ import {
 import KeysControl from './components/KeysControl';
 import NewKeyControl from './components/NewKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
+import IconsControl from './components/IconsControl';
 
 class AppNavigator extends Component {
     render() {
@@ -18,7 +19,8 @@ class AppNavigator extends Component {
             <Navigator
                 style={styles.navigator}
                 ref="navigator"
-                initialRoute={{ routeKey: 'keyscontrol' }}
+                //initialRoute={{ routeKey: 'keyscontrol' }}
+                initialRoute={{ routeKey: 'iconscontrol' }}                
                 renderScene={this._renderScene}
                 navigationBar={
                     <Navigator.NavigationBar
@@ -50,6 +52,8 @@ class AppNavigator extends Component {
             return <CheckKeyControl navigator={navigator} keyObject={route.keyObject}/>
         } else if (route.routeKey === 'newkeycontrol') {
             return <NewKeyControl navigator={navigator} />
+        } else if (route.routeKey === 'iconscontrol') {
+            return <IconsControl navigator={navigator} />
         }
         return <KeysControl navigator={navigator} />;
     }

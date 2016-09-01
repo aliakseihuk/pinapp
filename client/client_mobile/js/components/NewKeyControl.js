@@ -28,7 +28,7 @@ class NewKeyControl extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <TouchableHighlight>
+                    <TouchableHighlight onPress={this._onIconSelectPress.bind(this)}>
                         <Text>
                             Icon
                         </Text>
@@ -63,6 +63,10 @@ class NewKeyControl extends Component {
         this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
         this.props.clearNew();
         this.props.navigator.pop({});
+    }
+
+    _onIconSelectPress() {
+        this.props.navigator.push({routeKey: 'iconscontrol'});
     }
 }
 

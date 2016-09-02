@@ -19,8 +19,7 @@ class AppNavigator extends Component {
             <Navigator
                 style={styles.navigator}
                 ref="navigator"
-                //initialRoute={{ routeKey: 'keyscontrol' }}
-                initialRoute={{ routeKey: 'iconscontrol' }}                
+                initialRoute={{ routeKey: 'keyscontrol' }}
                 renderScene={this._renderScene}
                 navigationBar={
                     <Navigator.NavigationBar
@@ -49,11 +48,11 @@ class AppNavigator extends Component {
 
     _renderScene(route, navigator) {
         if (route.routeKey === 'checkkeycontrol') {
-            return <CheckKeyControl navigator={navigator} keyObject={route.keyObject}/>
+            return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
         } else if (route.routeKey === 'newkeycontrol') {
             return <NewKeyControl navigator={navigator} />
         } else if (route.routeKey === 'iconscontrol') {
-            return <IconsControl navigator={navigator} />
+            return <IconsControl navigator={navigator} onIconSelect={route.onIconSelect} selectedIcon={route.selectedIcon} />
         }
         return <KeysControl navigator={navigator} />;
     }

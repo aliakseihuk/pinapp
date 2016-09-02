@@ -3,6 +3,7 @@
 import {
     CHANGE_NEW_NAME,
     CHANGE_NEW_PASSWORD,
+    CHANGE_NEW_ICON,
     SWITCH_SHOW_SYMBOLS,
     SWITCH_IS_NUMERICAL,
     CLEAR_NEW
@@ -13,7 +14,7 @@ const initialState = {
     password: '',
     showSymbols: false,
     isNumerical: false,
-    iconType: 0
+    icon: 0
 };
 
 export default (state = initialState, action) => {
@@ -27,6 +28,11 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 password: action.password
+            };
+        case CHANGE_NEW_ICON:
+            return {
+                ...state,
+                icon: action.icon
             };
         case SWITCH_SHOW_SYMBOLS:
             return {

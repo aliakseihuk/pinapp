@@ -5,7 +5,6 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableHighlight,
     Switch
 } from 'react-native';
 import { connect } from 'react-redux';
@@ -13,10 +12,13 @@ import { bindActionCreators } from 'redux'
 
 import NewKeyButton from './NewKeyButton';
 import KeyTextInput from './KeyTextInput';
+import KeyIcon from './KeyIcon';
+import Icons from '../../data/icons.json'
 
 import {
     changeNewName,
     changeNewPassword,
+    changeNewIcon,
     switchShowSymbols,
     switchIsNumerical,
     clearNew,
@@ -28,11 +30,7 @@ class NewKeyControl extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <TouchableHighlight onPress={this._onIconSelectPress.bind(this)}>
-                        <Text>
-                            Icon
-                        </Text>
-                    </TouchableHighlight>
+                    <KeyIcon name={Icons[this.props.icon].name} size={50} onPress={this._openIconsControl.bind(this)} />
                     <KeyTextInput
                         value={this.props.name}
                         onChangeText={(name) => this.props.changeNewName(name)}
@@ -65,8 +63,13 @@ class NewKeyControl extends Component {
         this.props.navigator.pop({});
     }
 
-    _onIconSelectPress() {
-        this.props.navigator.push({routeKey: 'iconscontrol'});
+    _openIconsControl() {
+        this.props.navigator.push({routeKey: 'iconscontrol', onIconSelect: this._onIconSelect.bind(this), selectedIcon: this.props.icon});
+    }
+
+    _onIconSelect(icon) {
+        this.props.changeNewIcon(icon);
+        this.props.navigator.pop({});
     }
 }
 
@@ -88,6 +91,7 @@ const stateToProps = (state) => {
         password: state.newKey.password,
         showSymbols: state.newKey.showSymbols,
         isNumerical: state.newKey.isNumerical,
+        icon: state.newKey.icon
     }
 };
 
@@ -95,6 +99,7 @@ const dispatchToProps = (dispatch) => {
     return bindActionCreators({
         changeNewName,
         changeNewPassword,
+        changeNewIcon,
         switchShowSymbols,
         switchIsNumerical,
         clearNew,

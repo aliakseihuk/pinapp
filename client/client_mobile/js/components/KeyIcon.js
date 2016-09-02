@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/Ionicons';
-import Icons from '../../data/icons.json';
+import icons from '../../data/icons.json';
+import colorscheme from '../../data/colorscheme.json';
 
 class KeyIcon extends Component {
     render() {
@@ -23,7 +24,7 @@ class KeyIcon extends Component {
         return (
             <TouchableOpacity onPress={this.props.onPress}>
                 <View style={[styles.container, sizeStyle]}>
-                    <Icon name={Icons[this.props.iconId].name} size={this.props.size / 1.5} />
+                    <Icon name={icons[this.props.iconId].name} size={this.props.size / 1.5} color={colorscheme.color}/>
                 </View>
             </TouchableOpacity>
         );
@@ -33,6 +34,7 @@ class KeyIcon extends Component {
 const styles = StyleSheet.create({
     container: {
         borderWidth: 1,
+        borderColor: colorscheme.borderColor,
         justifyContent: 'center',
         alignItems: 'center'
     }

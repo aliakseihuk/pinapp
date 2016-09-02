@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 
 import KeyIcon from './KeyIcon';
-import Icons from '../../data/icons.json';
+import icons from '../../data/icons.json';
 
 class IconsControl extends Component {
     constructor(props) {
@@ -21,13 +21,13 @@ class IconsControl extends Component {
         let uirow = [];
         let column = 0;
         let count = 0;
-        for(let icon of Icons) {
+        for(let icon of icons) {
             uirow.push(
                 <KeyIcon iconId={icon.id} size={65} onPress={() => { this.props.onIconSelect(icon.id)}}/>
             );
             ++column;
             ++count;
-            if(column === this.columnCount || count === Icons.length) {
+            if(column === this.columnCount || count === icons.length) {
                 uirows.push(
                 <View style={styles.rowContainer}>
                     {uirow}

@@ -12,6 +12,7 @@ import KeysControl from './components/KeysControl';
 import NewKeyControl from './components/NewKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
 import IconsControl from './components/IconsControl';
+import colorscheme from '../data/colorscheme.json';
 
 class AppNavigator extends Component {
     render() {
@@ -60,11 +61,11 @@ class AppNavigator extends Component {
 
 const styles = StyleSheet.create({
     navigator: {
-        backgroundColor: '#00DFFC',
+        backgroundColor: colorscheme.backgroundColor,
     },
     navigatorBar: {
         borderBottomWidth: 1,
-        borderColor: '#00B4CC'
+        borderColor: colorscheme.borderColor
     }
 });
 

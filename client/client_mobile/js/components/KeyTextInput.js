@@ -7,6 +7,8 @@ import {
     TextInput
 } from 'react-native';
 
+import colorscheme from '../../data/colorscheme.json';
+
 class KeyTextInput extends Component {
     render() {
 
@@ -44,7 +46,7 @@ class KeyTextInput extends Component {
 
 const styles = StyleSheet.create({
     inputContainer: {
-        borderColor: '#00B4CC',
+        borderColor: colorscheme.borderColor,
         borderBottomWidth: 1
     },
     input: {

@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 
 import KeyIcon from './KeyIcon';
+import colorscheme from '../../data/colorscheme.json';
 
 class KeyCard extends Component {
     render() {
@@ -28,14 +29,14 @@ class KeyCard extends Component {
 const styles = StyleSheet.create({
     keyContainer: {
         flexDirection: 'row',
-        borderColor: '#00B4CC',
+        borderColor: colorscheme.borderColor,
         borderBottomWidth: 1,
         padding: 10,
     },
     keyName: {
         marginLeft: 15,
         fontSize: 37.93,
-        color: '#005F6B'
+        color: colorscheme.color
     }
 });
 

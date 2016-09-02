@@ -7,6 +7,7 @@ import {
     View,
     TouchableHighlight
 } from 'react-native';
+import colorscheme from '../../data/colorscheme.json';
 
 class NewKeyButton extends Component {
     render() {
@@ -24,7 +25,7 @@ const styles = StyleSheet.create({
     addNewContainer: {
         alignItems: 'flex-end',
         borderTopWidth: 1,
-        borderColor: '#00B4CC',
+        borderColor: colorscheme.borderColor,
         padding: 10,
         paddingLeft: 20,
         paddingRight: 20,

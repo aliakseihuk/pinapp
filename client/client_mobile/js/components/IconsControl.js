@@ -23,7 +23,7 @@ class IconsControl extends Component {
         let count = 0;
         for(let icon of Icons) {
             uirow.push(
-                <KeyIcon name={icon.name} size={65} onPress={() => { this.props.onIconSelect(icon.id)}}/>
+                <KeyIcon iconId={icon.id} size={65} onPress={() => { this.props.onIconSelect(icon.id)}}/>
             );
             ++column;
             ++count;

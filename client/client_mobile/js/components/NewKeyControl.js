@@ -13,7 +13,6 @@ import { bindActionCreators } from 'redux'
 import NewKeyButton from './NewKeyButton';
 import KeyTextInput from './KeyTextInput';
 import KeyIcon from './KeyIcon';
-import Icons from '../../data/icons.json'
 
 import {
     changeNewName,
@@ -30,7 +29,7 @@ class NewKeyControl extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <KeyIcon name={Icons[this.props.icon].name} size={50} onPress={this._openIconsControl.bind(this)} />
+                    <KeyIcon iconId={this.props.icon} size={50} onPress={this._openIconsControl.bind(this)} />
                     <KeyTextInput
                         value={this.props.name}
                         onChangeText={(name) => this.props.changeNewName(name)}
@@ -58,7 +57,7 @@ class NewKeyControl extends Component {
     }
 
     _onAddNewPress() {
-        this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, 0);
+        this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, this.props.icon);
         this.props.clearNew();
         this.props.navigator.pop({});
     }

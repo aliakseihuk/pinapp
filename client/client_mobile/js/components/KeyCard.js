@@ -5,29 +5,36 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableHighlight
+    TouchableOpacity
 } from 'react-native';
+
+import KeyIcon from './KeyIcon';
 
 class KeyCard extends Component {
     render() {
         return (
-            <TouchableHighlight style={styles.keyContainer} onPress={this.props.onPress}>
-                <Text style={styles.keyName}>
-                    {this.props.userkey.name}
-                </Text>
-            </TouchableHighlight>
+            <TouchableOpacity onPress={this.props.onPress}>
+                <View style={styles.keyContainer}>
+                    <KeyIcon iconId={this.props.userkey.icon} size={50}/>
+                    <Text style={styles.keyName}>
+                        {this.props.userkey.name}
+                    </Text>
+                </View>
+            </TouchableOpacity>
         );
     }
 }
 
 const styles = StyleSheet.create({
     keyContainer: {
+        flexDirection: 'row',
         borderColor: '#00B4CC',
         borderBottomWidth: 1,
+        padding: 10,
     },
     keyName: {
+        marginLeft: 15,
         fontSize: 37.93,
-        margin: 10,
         color: '#005F6B'
     }
 });

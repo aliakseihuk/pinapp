@@ -5,7 +5,7 @@ import {
     StyleSheet,
     Text,
     View,
-    TouchableHighlight
+    ScrollView
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -22,9 +22,9 @@ class KeysControl extends Component {
         ));
         return (
             <View style={styles.container}>
-                <View style={styles.keys}>
+                <ScrollView contentContainerStyle={styles.keys}>
                     {keys}
-                </View>
+                </ScrollView>
                 <NewKeyButton onPress={this._onAddNewPress.bind(this)} />
             </View>
         );
@@ -50,6 +50,7 @@ const styles = StyleSheet.create({
     keys: {
         paddingLeft: 20,
         paddingRight: 20,
+        paddingBottom: 20
     }
 });
 

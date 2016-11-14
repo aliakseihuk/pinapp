@@ -6,8 +6,12 @@ var routes = function(Key) {
   keysRouter.route('/')
     .post(function(req, res) {
       var key = new Key(req.body);
-      key.save();
-      res.status(201).send(key);
+      key.save(function(err) {
+        if (err)
+          res.status(500).send(err);
+        else
+          res.status(201).send(key);
+      });
     })
     .get(function(req, res) {
       Key.find(function(err, keys) {
@@ -15,6 +19,14 @@ var routes = function(Key) {
           res.status(500).send(err);
         else
           res.json(keys)
+      });
+    })
+    .delete(function(req, res) {
+      Key.remove({}, function(err) {
+        if(err)
+          res.status(500).send(err);
+        else
+          res.status(204).send();
       });
     });
 

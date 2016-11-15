@@ -18,7 +18,7 @@ import { clearCheck } from '../actions';
 class KeysControl extends Component {
     render() {
         let keys = this.props.keys.map((key) => (
-            <KeyCard key={key.id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this)}/>
+            <KeyCard key={key._id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this)}/>
         ));
         return (
             <View style={styles.container}>

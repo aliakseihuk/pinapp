@@ -25,9 +25,8 @@ class CheckKeyControl extends Component {
                     isPassword={true}
                     isNumeric = {this.props.keyObject.isNumerical}
                     autoFocus={true}
+                    isValid={this.props.isVerified}
                 />
-
-                <Text>Is verified: {this.props.isVerified.toString()}</Text>     
             </View>
         );
     }
@@ -36,7 +35,8 @@ class CheckKeyControl extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        marginTop: 100,
+        marginTop: 90,
+        padding: 20
     }
 });
 

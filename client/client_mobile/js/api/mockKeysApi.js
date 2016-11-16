@@ -4,47 +4,47 @@ const keys = [
   {
     _id: '582b32d49514c32cbb80ee2f',
     name: 'key 1',
-    hash: '',
+    hash: '9120f5524cc54b86cf1d2a1c04faf44c', // md5 'password 1'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee31',
     name: 'key 2',
-    hash: '',
+    hash: 'bc140e6106e0c3b446772d7d90280501', // md5 'password 2'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee32',
     name: 'key 3',
-    hash: '',
+    hash: '48cb7ea4e06a0f2804f7106d64c1c69d', // md5 'password 3'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee33',
     name: 'key 4',
-    hash: '',
+    hash: '4081e8d8c88084a26911ae5534e5ddbb', // md5 'password 4'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee34',
     name: 'key 5',
-    hash: '',
+    hash: 'e4e0f476ad9e126e38c07f066b38fe38', // md5 'password 5'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee35',
     name: 'key 6',
-    hash: '',
+    hash: '936a9cdd294b63cd058ecba8b6d1f173', // md5 'password 6'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee36',
     name: 'key 7',
-    hash: '',
+    hash: '2a64cbe018343c13cbec0ade973bbc6d', // md5 'password 7'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee37',
     name: 'key 8',
-    hash: '',
+    hash: '11b0f5b528bbdaa389a04ebbe4c57c1f', // md5 'password 8'
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee38',
     name: 'key 9',
-    hash: '',
+    hash: 'b20ad8f11bec70b92499ac92d0d81a83', // md5 'password 9'
     isNumerical: false
   }
 ];

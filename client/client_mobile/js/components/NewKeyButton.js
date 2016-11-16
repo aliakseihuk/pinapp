@@ -24,7 +24,7 @@ class NewKeyButton extends Component {
 const styles = StyleSheet.create({
     addNewContainer: {
         alignItems: 'flex-end',
-        backgroundColor: colorscheme.controlBackgroundColor,
+        backgroundColor: colorscheme.controlBackground,
         padding: 10
     }
 });

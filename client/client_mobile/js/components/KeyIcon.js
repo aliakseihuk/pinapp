@@ -29,12 +29,12 @@ const styles = StyleSheet.create({
     height: size,
     width: size,
     borderRadius: size / 2,
-    backgroundColor: colorscheme.controlBackgroundColor,
+    backgroundColor: colorscheme.controlBackground,
     justifyContent: 'center',
     alignItems: 'center'
   },
   letter: {
-    color: colorscheme.fontColor,
+    color: colorscheme.font,
     fontSize: 28
   }
 });

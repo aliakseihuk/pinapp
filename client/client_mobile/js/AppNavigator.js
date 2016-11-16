@@ -61,13 +61,13 @@ class AppNavigator extends Component {
 
 const styles = StyleSheet.create({
   navigator: {
-    backgroundColor: colorscheme.contentBackgroundColor,
+    backgroundColor: colorscheme.contentBackground,
   },
   navigatorBar: {
-    backgroundColor: colorscheme.controlBackgroundColor
+    backgroundColor: colorscheme.controlBackground
   },
   navigatorTitle: {
-    color: colorscheme.fontColor,
+    color: colorscheme.font,
     fontSize: 21,
     paddingTop: 5
   }

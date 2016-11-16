@@ -1,5 +1,8 @@
 {
-    "controlBackgroundColor": "#434343",
-    "contentBackgroundColor": "#1d1d1d",
-    "fontColor": "#e7e7e7"
+    "controlBackground": "#434343",
+    "contentBackground": "#1d1d1d",
+    "font": "#e7e7e7",
+    "border": "#434343",
+    "valid": "#008600",
+    "invalid": "#860000"
 }

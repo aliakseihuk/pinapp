@@ -41,11 +41,11 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     paddingLeft: 15,
     borderBottomWidth: 1,
-    borderColor: colorscheme.controlBackgroundColor,
+    borderColor: colorscheme.border,
   },
   keyName: {
     fontSize: 20,
-    color: colorscheme.fontColor
+    color: colorscheme.font
   }
 });
 

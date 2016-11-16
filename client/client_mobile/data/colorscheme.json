@@ -1,5 +1,5 @@
 {
-    "color": "black",
-    "borderColor": "black",
-    "backgroundColor": "white"
+    "controlBackgroundColor": "#434343",
+    "contentBackgroundColor": "#1d1d1d",
+    "fontColor": "#e7e7e7"
 }

@@ -5,55 +5,46 @@ const keys = [
     _id: '582b32d49514c32cbb80ee2f',
     name: 'key 1',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee31',
     name: 'key 2',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee32',
     name: 'key 3',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee33',
     name: 'key 4',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee34',
     name: 'key 5',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee35',
     name: 'key 6',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee36',
     name: 'key 7',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee37',
     name: 'key 8',
     hash: '',
-    icon: 0,
     isNumerical: false
   }, {
     _id: '582b33b29514c32cbb80ee38',
     name: 'key 9',
     hash: '',
-    icon: 0,
     isNumerical: false
   }
 ];

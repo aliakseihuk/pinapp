@@ -2,42 +2,41 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet,
-    View,
-    TextInput,
-    TouchableOpacity
+  StyleSheet,
+  View,
+  Text,
+  TouchableOpacity
 } from 'react-native';
 
-import Icon from 'react-native-vector-icons/Ionicons';
-import icons from '../../data/icons.json';
 import colorscheme from '../../data/colorscheme.json';
 
 class KeyIcon extends Component {
-    render() {
-        let sizeStyle = {
-            height: this.props.size,
-            width: this.props.size,
-            borderRadius: this.props.size / 2,
-            paddingTop: this.props.size / 20,
-        }
-
-        return (
-            <TouchableOpacity onPress={this.props.onPress}>
-                <View style={[styles.container, sizeStyle]}>
-                    <Icon name={icons[this.props.iconId].name} size={this.props.size / 1.5} color={colorscheme.color}/>
-                </View>
-            </TouchableOpacity>
-        );
-    }
+  render() {
+    return (
+      <TouchableOpacity onPress={this.props.onPress}>
+        <View style={styles.container}>
+          <Text style={styles.letter}>{this.props.name.charAt(0).toUpperCase()}</Text>
+        </View>
+      </TouchableOpacity>
+    );
+  }
 }
 
+const size = 45;
+
 const styles = StyleSheet.create({
-    container: {
-        borderWidth: 1,
-        borderColor: colorscheme.borderColor,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
+  container: {
+    height: size,
+    width: size,
+    borderRadius: size / 2,
+    backgroundColor: colorscheme.controlBackgroundColor,
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  letter: {
+    color: colorscheme.fontColor,
+    fontSize: 28
+  }
 });
 
 export default KeyIcon;

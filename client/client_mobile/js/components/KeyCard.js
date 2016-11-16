@@ -2,42 +2,51 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet,
-    Text,
-    View,
-    TouchableOpacity
+  StyleSheet,
+  Text,
+  View,
+  TouchableOpacity
 } from 'react-native';
 
 import KeyIcon from './KeyIcon';
 import colorscheme from '../../data/colorscheme.json';
 
 class KeyCard extends Component {
-    render() {
-        return (
-            <TouchableOpacity onPress={this.props.onPress}>
-                <View style={styles.keyContainer}>
-                    <KeyIcon iconId={this.props.userkey.icon} size={50}/>
-                    <Text style={styles.keyName}>
-                        {this.props.userkey.name}
-                    </Text>
-                </View>
-            </TouchableOpacity>
-        );
-    }
+  render() {
+    return (
+      <TouchableOpacity onPress={this.props.onPress}>
+        <View style={styles.keyContainer}>
+          <KeyIcon name={this.props.userkey.name} onPress={this.props.onPress}/>
+          <View style={styles.nameContainer}>
+            <Text style={styles.keyName}>
+              {this.props.userkey.name}
+            </Text>
+          </View>
+        </View>
+      </TouchableOpacity>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
-    keyContainer: {
-        flexDirection: 'row',
-        borderColor: colorscheme.borderColor,
-        borderBottomWidth: 1,
-        padding: 10,
-    },
-    keyName: {
-        marginLeft: 15,
-        fontSize: 37.93,
-        color: colorscheme.color
-    }
+  keyContainer: {
+    flexDirection: 'row',
+    padding: 5,
+    paddingRight: 0,
+  },
+  nameContainer: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    marginLeft: 15,
+    paddingLeft: 15,
+    borderBottomWidth: 1,
+    borderColor: colorscheme.controlBackgroundColor,
+  },
+  keyName: {
+    fontSize: 20,
+    color: colorscheme.fontColor
+  }
 });
 
 export default KeyCard;

@@ -45,11 +45,11 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'space-between',
         alignItems: 'stretch',
-        marginTop: 65,
+        marginTop: 75,
     },
     keys: {
-        paddingLeft: 20,
-        paddingRight: 20,
+        paddingLeft: 5,
+        paddingRight: 5,
         paddingBottom: 20
     }
 });

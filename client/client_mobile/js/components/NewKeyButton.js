@@ -13,7 +13,7 @@ class NewKeyButton extends Component {
     render() {
         return (
             <View style={styles.addNewContainer}>
-                <TouchableHighlight style={styles.addNew} onPress={this.props.onPress}>
+                <TouchableHighlight onPress={this.props.onPress}>
                     <Text>Add new key</Text>
                 </TouchableHighlight>
             </View>
@@ -24,14 +24,8 @@ class NewKeyButton extends Component {
 const styles = StyleSheet.create({
     addNewContainer: {
         alignItems: 'flex-end',
-        borderTopWidth: 1,
-        borderColor: colorscheme.borderColor,
-        padding: 10,
-        paddingLeft: 20,
-        paddingRight: 20,
-    },
-    addNew: {
-        
+        backgroundColor: colorscheme.controlBackgroundColor,
+        padding: 10
     }
 });
 

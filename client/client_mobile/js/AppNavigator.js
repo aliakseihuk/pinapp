@@ -2,10 +2,10 @@
 
 import React, { Component } from 'react';
 import {
-    Text,
-    Navigator,
-    TouchableHighlight,
-    StyleSheet
+  Text,
+  Navigator,
+  TouchableHighlight,
+  StyleSheet
 } from 'react-native';
 
 import KeysControl from './components/KeysControl';
@@ -15,58 +15,62 @@ import IconsControl from './components/IconsControl';
 import colorscheme from '../data/colorscheme.json';
 
 class AppNavigator extends Component {
-    render() {
-        return (
-            <Navigator
-                style={styles.navigator}
-                ref="navigator"
-                initialRoute={{ routeKey: 'keyscontrol' }}
-                renderScene={this._renderScene}
-                navigationBar={
-                    <Navigator.NavigationBar
-                        style={styles.navigatorBar}
-                        routeMapper={{
-                            LeftButton: (route, navigator, index, navState) => {
-                                if (index != 0)
-                                    return (
-                                        <TouchableHighlight onPress={() => navigator.pop()}>
-                                            <Text>Back</Text>
-                                        </TouchableHighlight>
-                                    );
-                            },
-                            RightButton: (route, navigator, index, navState) => { 
-                                return null;
-                            },
-                            Title: (route, navigator, index, navState) => { 
-                                return (<Text>Pin App</Text>);
-                            }
-                        }}
-                    />
-                }
+  render() {
+    return (
+      <Navigator
+        style={styles.navigator}
+        ref="navigator"
+        initialRoute={{ routeKey: 'keyscontrol' }}
+        renderScene={this._renderScene}
+        navigationBar={
+          <Navigator.NavigationBar
+            style={styles.navigatorBar}
+            routeMapper={{
+              LeftButton: (route, navigator, index, navState) => {
+                if (index != 0)
+                  return (
+                    <TouchableHighlight onPress={() => navigator.pop() }>
+                      <Text>Back</Text>
+                    </TouchableHighlight>
+                  );
+              },
+              RightButton: (route, navigator, index, navState) => {
+                return null;
+              },
+              Title: (route, navigator, index, navState) => {
+                return (<Text style={styles.navigatorTitle}>PINAPP</Text>);
+              }
+            }}
             />
-        );
-    }
-
-    _renderScene(route, navigator) {
-        if (route.routeKey === 'checkkeycontrol') {
-            return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
-        } else if (route.routeKey === 'newkeycontrol') {
-            return <NewKeyControl navigator={navigator} />
-        } else if (route.routeKey === 'iconscontrol') {
-            return <IconsControl navigator={navigator} onIconSelect={route.onIconSelect} selectedIcon={route.selectedIcon} />
         }
-        return <KeysControl navigator={navigator} />;
+        />
+    );
+  }
+
+  _renderScene(route, navigator) {
+    if (route.routeKey === 'checkkeycontrol') {
+      return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
+    } else if (route.routeKey === 'newkeycontrol') {
+      return <NewKeyControl navigator={navigator} />
+    } else if (route.routeKey === 'iconscontrol') {
+      return <IconsControl navigator={navigator} onIconSelect={route.onIconSelect} selectedIcon={route.selectedIcon} />
     }
+    return <KeysControl navigator={navigator} />;
+  }
 };
 
 const styles = StyleSheet.create({
-    navigator: {
-        backgroundColor: colorscheme.backgroundColor,
-    },
-    navigatorBar: {
-        borderBottomWidth: 1,
-        borderColor: colorscheme.borderColor
-    }
+  navigator: {
+    backgroundColor: colorscheme.contentBackgroundColor,
+  },
+  navigatorBar: {
+    backgroundColor: colorscheme.controlBackgroundColor
+  },
+  navigatorTitle: {
+    color: colorscheme.fontColor,
+    fontSize: 21,
+    paddingTop: 5
+  }
 });
 
 export default AppNavigator;

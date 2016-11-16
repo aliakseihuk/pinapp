@@ -17,7 +17,6 @@ import KeyIcon from './KeyIcon';
 import {
     changeNewName,
     changeNewPassword,
-    changeNewIcon,
     switchShowSymbols,
     switchIsNumerical,
     clearNew,
@@ -29,7 +28,7 @@ class NewKeyControl extends Component {
         return (
             <View style={styles.container}>
                 <View>
-                    <KeyIcon iconId={this.props.icon} size={50} onPress={this._openIconsControl.bind(this)} />
+                    <KeyIcon iconId={this.props.icon} size={50}/>
                     <KeyTextInput
                         value={this.props.name}
                         onChangeText={(name) => this.props.changeNewName(name)}
@@ -57,17 +56,8 @@ class NewKeyControl extends Component {
     }
 
     _onAddNewPress() {
-        this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical, this.props.icon);
+        this.props.addKey(Date.now(), this.props.name, this.props.password, this.props.isNumerical);
         this.props.clearNew();
-        this.props.navigator.pop({});
-    }
-
-    _openIconsControl() {
-        this.props.navigator.push({routeKey: 'iconscontrol', onIconSelect: this._onIconSelect.bind(this), selectedIcon: this.props.icon});
-    }
-
-    _onIconSelect(icon) {
-        this.props.changeNewIcon(icon);
         this.props.navigator.pop({});
     }
 }
@@ -90,7 +80,6 @@ const stateToProps = (state) => {
         password: state.newKey.password,
         showSymbols: state.newKey.showSymbols,
         isNumerical: state.newKey.isNumerical,
-        icon: state.newKey.icon
     }
 };
 
@@ -98,7 +87,6 @@ const dispatchToProps = (dispatch) => {
     return bindActionCreators({
         changeNewName,
         changeNewPassword,
-        changeNewIcon,
         switchShowSymbols,
         switchIsNumerical,
         clearNew,

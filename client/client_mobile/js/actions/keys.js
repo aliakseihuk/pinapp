@@ -6,13 +6,12 @@ import KeysApi from '../api/mockKeysApi';
 // export const REMOVE_KEY = 'REMOVE_KEY';
 export const LOAD_KEYS_SUCCESS = 'LOAD_KEYS_SUCCESS';
 
-// export const addKey = (id, name, password, isNumerical, icon) => ({
+// export const addKey = (id, name, password, isNumerical) => ({
 //   type: ADD_KEY,
 //   id: id,
 //   name: name,
 //   password: password,
-//   isNumerical: isNumerical,
-//   icon: icon
+//   isNumerical: isNumerical
 // });
 
 export const loadKeys = () => {

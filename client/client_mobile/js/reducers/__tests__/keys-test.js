@@ -24,7 +24,6 @@ describe('keys reducer', () => {
             name: 'new key',
             hash: 'some password',
             isNumerical: false,
-            iconType: 0
         }]);
     });
 

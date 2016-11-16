@@ -21,7 +21,6 @@ describe('newkey reducer', () => {
             password: '',
             showSymbols: true,
             isNumerical: false,
-            iconType: 0,
         });
     });
 
@@ -33,7 +32,6 @@ describe('newkey reducer', () => {
             password: '',
             showSymbols: false,
             isNumerical: true,
-            iconType: 0,
         });
     });
 
@@ -60,8 +58,7 @@ describe('newkey reducer', () => {
             name: 'some name',
             password: 'some password',
             showSymbols: true,
-            isNumerical: true,
-            iconType: 0,
+            isNumerical: true
         };
         const action = clearNew();
         
@@ -69,8 +66,7 @@ describe('newkey reducer', () => {
             name: '',
             password: '',
             showSymbols: false,
-            isNumerical: false,
-            iconType: 0,
+            isNumerical: false
         });
     });
 });

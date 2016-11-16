@@ -19,7 +19,6 @@ export default (state = [], action) => {
                 name: action.name,
                 hash: hash,
                 isNumerical: action.isNumerical,
-                icon: action.icon
             };
         default:
             return state;

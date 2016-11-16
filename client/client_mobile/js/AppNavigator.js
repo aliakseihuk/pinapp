@@ -7,11 +7,11 @@ import {
   TouchableHighlight,
   StyleSheet
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import KeysControl from './components/KeysControl';
 import NewKeyControl from './components/NewKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
-import IconsControl from './components/IconsControl';
 import colorscheme from '../data/colorscheme.json';
 
 class AppNavigator extends Component {
@@ -29,8 +29,8 @@ class AppNavigator extends Component {
               LeftButton: (route, navigator, index, navState) => {
                 if (index != 0)
                   return (
-                    <TouchableHighlight onPress={() => navigator.pop() }>
-                      <Text>Back</Text>
+                    <TouchableHighlight style={styles.navigatorButton} onPress={() => navigator.pop()}>
+                      <Icon name="ios-arrow-back" size={30} color={colorscheme.font} />
                     </TouchableHighlight>
                   );
               },
@@ -38,7 +38,8 @@ class AppNavigator extends Component {
                 return null;
               },
               Title: (route, navigator, index, navState) => {
-                return (<Text style={styles.navigatorTitle}>PINAPP</Text>);
+                let text = route.routeKey === 'checkkeycontrol' ? route.keyObject.name : 'PINAPP';
+                return (<Text style={styles.navigatorTitle}>{text}</Text>);
               }
             }}
             />
@@ -52,8 +53,6 @@ class AppNavigator extends Component {
       return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
     } else if (route.routeKey === 'newkeycontrol') {
       return <NewKeyControl navigator={navigator} />
-    } else if (route.routeKey === 'iconscontrol') {
-      return <IconsControl navigator={navigator} onIconSelect={route.onIconSelect} selectedIcon={route.selectedIcon} />
     }
     return <KeysControl navigator={navigator} />;
   }
@@ -64,12 +63,16 @@ const styles = StyleSheet.create({
     backgroundColor: colorscheme.contentBackground,
   },
   navigatorBar: {
-    backgroundColor: colorscheme.controlBackground
+    backgroundColor: colorscheme.controlBackground,
+  },
+  navigatorButton: {
+    margin: 15,
+    marginTop: 7
   },
   navigatorTitle: {
     color: colorscheme.font,
     fontSize: 21,
-    paddingTop: 5
+    margin: 10,
   }
 });
 

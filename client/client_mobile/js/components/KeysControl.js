@@ -13,19 +13,35 @@ import { bindActionCreators } from 'redux';
 import KeyCard from './KeyCard';
 import NewKeyButton from './NewKeyButton';
 
-import { clearCheck } from '../actions';
+import {
+  removeKey,
+  toggleEditMode,
+  clearCheck
+} from '../actions';
 
 class KeysControl extends Component {
+
+  componentWillMount() {
+    let routes = this.props.navigator.getCurrentRoutes();
+    routes[routes.length - 1].onPressRightButton = (() => this.props.toggleEditMode()).bind(this);
+  }
+
   render() {
     let keys = this.props.keys.map((key) => (
-      <KeyCard key={key._id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this) }/>
+      <KeyCard 
+        key={key._id}
+        userkey={key}
+        editMode={this.props.editMode}
+        onPress={(() => this._onKeyPress(key)).bind(this)}
+        onRemovePress={(() => this._onRemovePress(key)).bind(this)}
+      />
     ));
     return (
       <View style={styles.container}>
         <ScrollView contentContainerStyle={styles.keys}>
           {keys}
         </ScrollView>
-        <NewKeyButton onPress={this._onAddNewPress.bind(this) } />
+        <NewKeyButton onPress={this._onAddNewPress.bind(this)} />
       </View>
     );
   }
@@ -35,8 +51,16 @@ class KeysControl extends Component {
   }
 
   _onKeyPress(keyObject) {
-    this.props.clearCheck();
-    this.props.navigator.push({ routeKey: 'checkkeycontrol', keyObject: keyObject });
+    if (this.props.editMode) {
+      this.props.navigator.push({ routeKey: 'editkeycontrol', keyObject: keyObject });
+    } else {
+      this.props.clearCheck();
+      this.props.navigator.push({ routeKey: 'checkkeycontrol', keyObject: keyObject });
+    }
+  }
+
+  _onRemovePress(keyObject) {
+    this.props.removeKey(keyObject);
   }
 }
 
@@ -63,6 +87,8 @@ const stateToProps = (state) => {
 
 const dispatchToProps = (dispatch) => {
   return bindActionCreators({
+    removeKey,
+    toggleEditMode,
     clearCheck
   }, dispatch)
 };

@@ -7,12 +7,22 @@ import {
   View,
   TouchableOpacity
 } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import KeyIcon from './KeyIcon';
 import colorscheme from '../../data/colorscheme.json';
 
 class KeyCard extends Component {
   render() {
+    let removeButton = undefined;
+    if (this.props.editMode) {
+      removeButton =  (
+        <TouchableOpacity onPress={this.props.onRemovePress}>
+          <Icon name="md-close" size={20} color={colorscheme.font}/>
+        </TouchableOpacity>
+      );
+    }
+
     return (
       <TouchableOpacity onPress={this.props.onPress}>
         <View style={styles.keyContainer}>
@@ -21,6 +31,7 @@ class KeyCard extends Component {
             <Text style={styles.keyName}>
               {this.props.userkey.name}
             </Text>
+            { removeButton }
           </View>
         </View>
       </TouchableOpacity>
@@ -36,10 +47,12 @@ const styles = StyleSheet.create({
   },
   nameContainer: {
     flex: 1,
-    flexDirection: 'column',
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     marginLeft: 15,
     paddingLeft: 15,
+    paddingRight: 10,
     borderBottomWidth: 1,
     borderColor: colorscheme.border,
   },

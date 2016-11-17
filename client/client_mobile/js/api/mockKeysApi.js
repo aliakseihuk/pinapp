@@ -62,7 +62,7 @@ class KeysApi {
     key = Object.assign({}, key); // to avoid manipulating object passed in.
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        if (key.id) {
+        if (key._id) {
           const existingKeyIndex = keys.findIndex(k => k._id === key._id);
           keys.splice(existingKeyIndex, 1, key);
         } else {
@@ -74,13 +74,11 @@ class KeysApi {
     });
   }
 
-  static deleteKey(authorId) {
+  static removeKey(keyId) {
     return new Promise((resolve, reject) => {
       setTimeout(() => {
-        const indexOfAuthorToDelete = authors.findIndex(author => {
-          author.authorId == authorId;
-        });
-        authors.splice(indexOfAuthorToDelete, 1);
+        const indexOfKeyToRemove = keys.findIndex(key => key._id === keyId);
+        keys.splice(indexOfKeyToRemove, 1);
         resolve();
       }, delay);
     });

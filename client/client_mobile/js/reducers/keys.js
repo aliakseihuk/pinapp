@@ -1,19 +1,31 @@
 'use strict';
 
 import {
-    LOAD_KEYS_SUCCESS
+  ADD_KEY_SUCCESS,
+  LOAD_KEYS_SUCCESS
 } from '../actions';
 
-export default (state = [], action) => {
-    switch (action.type) {
-        // case ADD_KEY:
-        //     return [
-        //         ...state,
-        //         key(undefined, action)
-        //     ];
-        case LOAD_KEYS_SUCCESS:
-            return action.keys;
-        default:
-            return state;
-    }
+const initialState = {
+  editMode: false,
+  elements: [],
+};
+
+export default (state = initialState, action) => {
+  switch (action.type) {
+    case ADD_KEY_SUCCESS:
+      return {
+        ...state,
+        elements: [
+          ...state.elements,
+          action.key
+        ]
+      };
+    case LOAD_KEYS_SUCCESS:
+      return {
+        ...state,
+        elements: action.keys,
+      };
+    default:
+      return state;
+  }
 };

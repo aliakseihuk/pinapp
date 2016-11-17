@@ -33,17 +33,17 @@ class KeyTextInput extends Component {
     }
 
     return (
-      <View style={[styles.inputContainer, { borderColor }]}>
+      <View style={[styles.inputContainer, { borderColor }, this.props.style]}>
         <TextInput
           style={[styles.input, { color }]}
           value={this.props.value}
           onChangeText={this.props.onChangeText}
           placeholder={placeholder}
-          placeholderTextColor={color}
+          placeholderTextColor={colorscheme.border}
           autoFocus={autoFocus}
-          secureTextEntry={isPassword && !this.props.showSymbols}
+          secureTextEntry={isPassword && !this.props.showPassword}
           keyboardType={keyboardType}
-          />
+        />
       </View>
     );
   }

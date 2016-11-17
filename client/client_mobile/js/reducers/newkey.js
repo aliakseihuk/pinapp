@@ -3,15 +3,14 @@
 import {
     CHANGE_NEW_NAME,
     CHANGE_NEW_PASSWORD,
-    SWITCH_SHOW_SYMBOLS,
-    SWITCH_IS_NUMERICAL,
+    TOGGLE_SHOW_PASSWORD,
     CLEAR_NEW
 } from '../actions';
 
 const initialState = {
     name: '',
     password: '',
-    showSymbols: false,
+    showPassword: false,
     isNumerical: false
 };
 
@@ -27,15 +26,10 @@ export default (state = initialState, action) => {
                 ...state,
                 password: action.password
             };
-        case SWITCH_SHOW_SYMBOLS:
+        case TOGGLE_SHOW_PASSWORD:
             return {
                 ...state,
-                showSymbols: !state.showSymbols
-            };
-        case SWITCH_IS_NUMERICAL:
-            return {
-                ...state,
-                isNumerical: !state.isNumerical
+                showPassword: !state.showPassword
             };
         case CLEAR_NEW:
             state = initialState;

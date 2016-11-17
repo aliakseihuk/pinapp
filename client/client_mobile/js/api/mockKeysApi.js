@@ -58,7 +58,7 @@ class KeysApi {
     });
   }
 
-  static saveKey(key) {
+  static addKey(key) {
     key = Object.assign({}, key); // to avoid manipulating object passed in.
     return new Promise((resolve, reject) => {
       setTimeout(() => {
@@ -86,12 +86,12 @@ class KeysApi {
     });
   }
 
-  _generateId() {
-    return this._s4() + this._s4() + this._s4() +
-      this._s4() + this._s4() + this._s4();
+  static generateId() {
+    return this.s4() + this.s4() + this.s4() +
+      this.s4() + this.s4() + this.s4();
   }
 
-  _s4() {
+  static s4() {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
       .substring(1);

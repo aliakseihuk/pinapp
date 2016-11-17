@@ -2,10 +2,10 @@
 
 import React, { Component } from 'react';
 import {
-    StyleSheet,
-    Text,
-    View,
-    ScrollView
+  StyleSheet,
+  Text,
+  View,
+  ScrollView
 } from 'react-native';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
@@ -16,54 +16,55 @@ import NewKeyButton from './NewKeyButton';
 import { clearCheck } from '../actions';
 
 class KeysControl extends Component {
-    render() {
-        let keys = this.props.keys.map((key) => (
-            <KeyCard key={key._id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this)}/>
-        ));
-        return (
-            <View style={styles.container}>
-                <ScrollView contentContainerStyle={styles.keys}>
-                    {keys}
-                </ScrollView>
-                <NewKeyButton onPress={this._onAddNewPress.bind(this)} />
-            </View>
-        );
-    }
+  render() {
+    let keys = this.props.keys.map((key) => (
+      <KeyCard key={key._id} userkey={key} onPress={(() => this._onKeyPress(key)).bind(this) }/>
+    ));
+    return (
+      <View style={styles.container}>
+        <ScrollView contentContainerStyle={styles.keys}>
+          {keys}
+        </ScrollView>
+        <NewKeyButton onPress={this._onAddNewPress.bind(this) } />
+      </View>
+    );
+  }
 
-    _onAddNewPress() {
-        this.props.navigator.push({routeKey: 'newkeycontrol'});
-    }
+  _onAddNewPress() {
+    this.props.navigator.push({ routeKey: 'newkeycontrol' });
+  }
 
-    _onKeyPress(keyObject) {
-        this.props.clearCheck();
-        this.props.navigator.push({routeKey: 'checkkeycontrol', keyObject: keyObject});
-    }
+  _onKeyPress(keyObject) {
+    this.props.clearCheck();
+    this.props.navigator.push({ routeKey: 'checkkeycontrol', keyObject: keyObject });
+  }
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'space-between',
-        alignItems: 'stretch',
-        marginTop: 75,
-    },
-    keys: {
-        paddingLeft: 5,
-        paddingRight: 5,
-        paddingBottom: 20
-    }
+  container: {
+    flex: 1,
+    justifyContent: 'space-between',
+    alignItems: 'stretch',
+    marginTop: 75,
+  },
+  keys: {
+    paddingLeft: 5,
+    paddingRight: 5,
+    paddingBottom: 20
+  }
 });
 
 const stateToProps = (state) => {
-    return {
-        keys: state.keys
-    }
+  return {
+    editMode: state.keys.editMode,
+    keys: state.keys.elements
+  }
 };
 
 const dispatchToProps = (dispatch) => {
-    return bindActionCreators({
-        clearCheck
-    }, dispatch)
+  return bindActionCreators({
+    clearCheck
+  }, dispatch)
 };
 
 export default connect(stateToProps, dispatchToProps)(KeysControl);

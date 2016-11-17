@@ -32,19 +32,20 @@ class AppNavigator extends Component {
                     <TouchableHighlight style={styles.navigatorButton} onPress={() => navigator.pop()}>
                       <Icon name="ios-arrow-back" size={30} color={colorscheme.font} />
                     </TouchableHighlight>
+                    
                   );
               },
               RightButton: (route, navigator, index, navState) => {
-                return null;
+                return this._getRightButton(route);
               },
               Title: (route, navigator, index, navState) => {
                 let text = route.routeKey === 'checkkeycontrol' ? route.keyObject.name : 'PINAPP';
                 return (<Text style={styles.navigatorTitle}>{text}</Text>);
               }
             }}
-            />
+          />
         }
-        />
+      />
     );
   }
 
@@ -55,6 +56,26 @@ class AppNavigator extends Component {
       return <NewKeyControl navigator={navigator} />
     }
     return <KeysControl navigator={navigator} />;
+  }
+
+  _getRightButton(route) {
+    let icon = undefined;
+    switch(route.routeKey) {
+      case 'keyscontrol':
+        icon = 'ios-create-outline';
+        break;
+      case 'newkeycontrol':
+        icon = 'md-checkmark';
+        break;
+      default:
+        break;
+    }
+    if (icon)
+      return (
+        <TouchableHighlight style={styles.navigatorButton} onPress={route.onPressRightButton}>
+          <Icon name={icon} size={30} color={colorscheme.font} />
+        </TouchableHighlight>
+      );
   }
 };
 

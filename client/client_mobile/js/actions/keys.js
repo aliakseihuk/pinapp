@@ -4,18 +4,19 @@ import md5 from 'md5';
 
 import KeysApi from '../api/mockKeysApi';
 
-export const ADD_KEY_SUCCESS = 'ADD_KEY_SUCCESS';
+export const SAVE_KEY_SUCCESS = 'SAVE_KEY_SUCCESS';
 export const LOAD_KEYS_SUCCESS = 'LOAD_KEYS_SUCCESS';
 export const REMOVE_KEY_SUCCESS = 'REMOVE_KEY_SUCCESS';
 export const TOOGLE_EDIT_MODE = 'TOGGLE_EDIT_MODE';
 
-export const addKey = (name, password) => {
+export const saveKey = (_id, name, password) => {
   return (dispatch) => {
     // move md5 to reducer or backend
-    let key = {name, hash: md5(password), isNumerical: false};
-    return KeysApi.addKey(key)
+    console.log(_id);
+    let key = {_id, name, hash: md5(password), isNumerical: false};
+    return KeysApi.saveKey(key)
       .then(key => {
-        dispatch(addKeySuccess(key))
+        dispatch(saveKeySuccess(key))
       })
       .catch(error => {
         throw error;
@@ -23,7 +24,7 @@ export const addKey = (name, password) => {
   }
 };
 
-const addKeySuccess = (key) => ({ type: ADD_KEY_SUCCESS, key });
+const saveKeySuccess = (key) => ({ type: SAVE_KEY_SUCCESS, key });
 
 export const loadKeys = () => {
   return (dispatch) => {

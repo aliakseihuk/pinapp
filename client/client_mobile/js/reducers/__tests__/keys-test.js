@@ -4,7 +4,7 @@ jest.disableAutomock();
 
 import keys from '../keys';
 import {
-    addKey,
+    saveKey,
     removeKey
 } from '../../actions'
 
@@ -17,7 +17,7 @@ describe('keys reducer', () => {
     it('add new key', () => {
         let state = [];
         
-        var action = addKey(0, 'new key', 'some password', false, 0);
+        var action = saveKey(0, 'new key', 'some password', false, 0);
         
         expect(keys(state, action)).toEqual([{
             id: 0,

@@ -1,7 +1,7 @@
 'use strict';
 
 import {
-  ADD_KEY_SUCCESS,
+  SAVE_KEY_SUCCESS,
   LOAD_KEYS_SUCCESS,
   REMOVE_KEY_SUCCESS,
   TOOGLE_EDIT_MODE
@@ -14,7 +14,9 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case ADD_KEY_SUCCESS:
+    case SAVE_KEY_SUCCESS:
+      const indexOfKeyToRemove = state.elements.findIndex(key => key._id === action.key._id);
+      state.elements.splice(indexOfKeyToRemove, 1);
       return {
         ...state,
         elements: [
@@ -29,11 +31,8 @@ export default (state = initialState, action) => {
       };
     case REMOVE_KEY_SUCCESS:
       console.log(action.keyId);
-      const indexOfKeyToRemove = state.elements.findIndex(key => key._id === action.keyId);
-      console.log(indexOfKeyToRemove);
-      console.log(state.elements);
+      indexOfKeyToRemove = state.elements.findIndex(key => key._id === action.keyId);
       state.elements.splice(indexOfKeyToRemove, 1);
-      console.log(state.elements);        
       return {
         ...state,
         elements: [...state.elements]

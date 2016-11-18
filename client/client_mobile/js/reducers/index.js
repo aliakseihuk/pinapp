@@ -3,11 +3,11 @@
 import { combineReducers } from 'redux';
 
 import keys from './keys';
-import newKey from './newkey';
+import editKey from './editkey';
 import checkKey from './checkkey';
 
 export default combineReducers({
     keys,
-    newKey,
+    editKey,
     checkKey
 });

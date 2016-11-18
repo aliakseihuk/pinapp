@@ -19,7 +19,7 @@ import {
   clearCheck
 } from '../actions';
 
-class KeysControl extends Component {
+class KeysListControl extends Component {
 
   componentWillMount() {
     let routes = this.props.navigator.getCurrentRoutes();
@@ -47,15 +47,15 @@ class KeysControl extends Component {
   }
 
   _onAddNewPress() {
-    this.props.navigator.push({ routeKey: 'newkeycontrol' });
+    this.props.navigator.push({ routeKey: 'addkeycontrol' });
   }
 
   _onKeyPress(keyObject) {
     if (this.props.editMode) {
-      this.props.navigator.push({ routeKey: 'editkeycontrol', keyObject: keyObject });
+      this.props.navigator.push({ routeKey: 'editkeycontrol', keyObject });
     } else {
       this.props.clearCheck();
-      this.props.navigator.push({ routeKey: 'checkkeycontrol', keyObject: keyObject });
+      this.props.navigator.push({ routeKey: 'checkkeycontrol', keyObject });
     }
   }
 
@@ -93,4 +93,4 @@ const dispatchToProps = (dispatch) => {
   }, dispatch)
 };
 
-export default connect(stateToProps, dispatchToProps)(KeysControl);
+export default connect(stateToProps, dispatchToProps)(KeysListControl);

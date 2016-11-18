@@ -15,18 +15,21 @@ import KeyIcon from './KeyIcon';
 import ShowButton from './ShowButton';
 
 import {
-  changeNewName,
-  changeNewPassword,
+  changeEditName,
+  changeEditPassword,
   toggleShowPassword,
-  clearNew,
-  addKey
+  clearEdit,
+  saveKey
 } from '../actions';
 
-class NewKeyControl extends Component {
+class EditKeyControl extends Component {
 
   componentWillMount() {
     let routes = this.props.navigator.getCurrentRoutes();
-    routes[routes.length - 1].onPressRightButton = this.onAddPress.bind(this);
+    routes[routes.length - 1].onPressRightButton = this.onSavePress.bind(this);
+    if (this.props.keyObject) {
+      this.props.changeEditName(this.props.keyObject.name);
+    }
   }
 
   render() {
@@ -36,13 +39,13 @@ class NewKeyControl extends Component {
           <KeyTextInput
             style={styles.input}
             value={this.props.name}
-            onChangeText={(name) => this.props.changeNewName(name) }
+            onChangeText={(name) => this.props.changeEditName(name) }
             placeholder='name'
           />
           <KeyTextInput
             style={styles.input}
             value={this.props.password}
-            onChangeText={(password) => this.props.changeNewPassword(password) }
+            onChangeText={(password) => this.props.changeEditPassword(password) }
             isPassword={true}
             isNumeric = {this.props.isNumerical}
             showPassword={this.props.showPassword}
@@ -57,9 +60,10 @@ class NewKeyControl extends Component {
     );
   }
 
-  onAddPress() {
-    this.props.addKey(this.props.name, this.props.password);
-    this.props.clearNew();
+  onSavePress() {
+    let _id = this.props.keyObject ? this.props.keyObject._id : undefined;
+    this.props.saveKey(_id, this.props.name, this.props.password);
+    this.props.clearEdit();
     this.props.navigator.pop({});
   }
 }
@@ -80,20 +84,20 @@ const styles = StyleSheet.create({
 
 const stateToProps = (state) => {
   return {
-    name: state.newKey.name,
-    password: state.newKey.password,
-    showPassword: state.newKey.showPassword
+    name: state.editKey.name,
+    password: state.editKey.password,
+    showPassword: state.editKey.showPassword
   }
 };
 
 const dispatchToProps = (dispatch) => {
   return bindActionCreators({
-    changeNewName,
-    changeNewPassword,
+    changeEditName,
+    changeEditPassword,
     toggleShowPassword,
-    clearNew,
-    addKey
+    clearEdit,
+    saveKey
   }, dispatch)
 };
 
-export default connect(stateToProps, dispatchToProps)(NewKeyControl);
+export default connect(stateToProps, dispatchToProps)(EditKeyControl);

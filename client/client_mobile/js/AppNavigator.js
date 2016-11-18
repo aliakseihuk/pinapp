@@ -9,8 +9,8 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-import KeysControl from './components/KeysControl';
-import NewKeyControl from './components/NewKeyControl';
+import KeysListControl from './components/KeysListControl';
+import EditKeyControl from './components/EditKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
 import colorscheme from '../data/colorscheme.json';
 
@@ -20,7 +20,7 @@ class AppNavigator extends Component {
       <Navigator
         style={styles.navigator}
         ref="navigator"
-        initialRoute={{ routeKey: 'keyscontrol' }}
+        initialRoute={{ routeKey: 'keyslistcontrol' }}
         renderScene={this._renderScene}
         navigationBar={
           <Navigator.NavigationBar
@@ -29,10 +29,10 @@ class AppNavigator extends Component {
               LeftButton: (route, navigator, index, navState) => {
                 if (index != 0)
                   return (
-                    <TouchableHighlight style={styles.navigatorButton} onPress={() => navigator.pop()}>
+                    <TouchableHighlight style={styles.navigatorButton} onPress={() => navigator.pop() }>
                       <Icon name="ios-arrow-back" size={30} color={colorscheme.font} />
                     </TouchableHighlight>
-                    
+
                   );
               },
               RightButton: (route, navigator, index, navState) => {
@@ -43,28 +43,31 @@ class AppNavigator extends Component {
                 return (<Text style={styles.navigatorTitle}>{text}</Text>);
               }
             }}
-          />
+            />
         }
-      />
+        />
     );
   }
 
   _renderScene(route, navigator) {
     if (route.routeKey === 'checkkeycontrol') {
       return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
-    } else if (route.routeKey === 'newkeycontrol') {
-      return <NewKeyControl navigator={navigator} />
+    } else if (route.routeKey === 'addkeycontrol') {
+      return <EditKeyControl navigator={navigator} />
+    } else if (route.routeKey === 'editkeycontrol') {
+      return <EditKeyControl navigator={navigator} keyObject={route.keyObject}/>
     }
-    return <KeysControl navigator={navigator} />;
+    return <KeysListControl navigator={navigator} />;
   }
 
   _getRightButton(route) {
     let icon = undefined;
-    switch(route.routeKey) {
-      case 'keyscontrol':
+    switch (route.routeKey) {
+      case 'keyslistcontrol':
         icon = 'ios-create-outline';
         break;
-      case 'newkeycontrol':
+      case 'addkeycontrol':
+      case 'editkeycontrol':
         icon = 'md-checkmark';
         break;
       default:

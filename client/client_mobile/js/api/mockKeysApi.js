@@ -58,10 +58,11 @@ class KeysApi {
     });
   }
 
-  static addKey(key) {
+  static saveKey(key) {
     key = Object.assign({}, key); // to avoid manipulating object passed in.
     return new Promise((resolve, reject) => {
       setTimeout(() => {
+        console.log(key);
         if (key._id) {
           const existingKeyIndex = keys.findIndex(k => k._id === key._id);
           keys.splice(existingKeyIndex, 1, key);

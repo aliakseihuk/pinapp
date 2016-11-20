@@ -9,12 +9,18 @@ import {
 } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
+import LoginControl from './components/LoginControl';
 import KeysListControl from './components/KeysListControl';
 import EditKeyControl from './components/EditKeyControl';
 import CheckKeyControl from './components/CheckKeyControl';
 import colorscheme from '../data/colorscheme.json';
 
 class AppNavigator extends Component {
+  constructor(props) {
+    super(props)
+    this._renderScene = this._renderScene.bind(this);
+  }
+
   render() {
     return (
       <Navigator
@@ -50,6 +56,9 @@ class AppNavigator extends Component {
   }
 
   _renderScene(route, navigator) {
+    if (!this.props.isSignin) {
+      return <LoginControl />
+    }
     if (route.routeKey === 'checkkeycontrol') {
       return <CheckKeyControl navigator={navigator} keyObject={route.keyObject} />
     } else if (route.routeKey === 'addkeycontrol') {

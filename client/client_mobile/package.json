@@ -1,6 +1,11 @@
 {
-  "name": "client_mobile",
-  "version": "0.0.1",
+  "name": "pinapp-client-mobile",
+  "version": "0.1.0",
+  "description": "A lightweight application for recalling and checking any of your passwords",
+  "author": {
+    "name" : "Aliaksei Huk",
+    "email" : "alexeyguk@gmail.com"
+  },
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start"

@@ -7,6 +7,8 @@ This application does not store or show back your passwords directly and hence t
 
 **Currently in development**
 
+<img src="client/client_mobile/.github/laptop.png" width="800">
+
 ## Requirements
 
 1. [React Native](http://facebook.github.io/react-native/docs/getting-started.html)

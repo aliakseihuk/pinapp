@@ -1,22 +1,20 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'client_mobile' do
-  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
-  # use_frameworks!
+target 'pinapp-client-mobile' do
+    # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+    # use_frameworks!
 
-  # Pods for client_mobile
+    # Auth0 Lock
 
-  target 'client_mobileTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+    pod 'Lock', '~> 1.26'
+    pod 'Lock/TouchID'
+    pod 'Lock/SMS'
+    pod 'Lock/Email'
+
+    target 'pinapp-client-mobileTests' do
+        inherit! :search_paths
+        # Pods for testing
+    end
 
 end
-
-# Auth0 Lock
-
-pod 'Lock', '~> 1.26'
-pod 'Lock/TouchID'
-pod 'Lock/SMS'
-pod 'Lock/Email'

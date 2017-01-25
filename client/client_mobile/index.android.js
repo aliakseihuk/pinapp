@@ -3,4 +3,4 @@
 import { AppRegistry } from 'react-native';
 import wrapper from './js/wrapper';
 
-AppRegistry.registerComponent('client_mobile', () => wrapper);
+AppRegistry.registerComponent('pinapp-client-mobile', () => wrapper);

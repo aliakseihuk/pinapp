@@ -27,6 +27,7 @@
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		29678E671D784A030012FDEC /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29678E661D784A030012FDEC /* Ionicons.ttf */; };
 		39AEFAF64B6240EBB897550C /* libA0RNLock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4BFC3DD8C6D42EAB6C2BCE0 /* libA0RNLock.a */; };
+		41FB89D31E38942000C1DACE /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 41FB89D21E38942000C1DACE /* libc++.tbd */; };
 		63B0A2B5D86042E2B42E0D47 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7C47688CBB0F4434BEEB6B3F /* Foundation.ttf */; };
 		695C4F7A7BAB4E1D901539E8 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD3D9F9BAEB4EBCB27F20D0 /* Octicons.ttf */; };
 		6DA0570D794E41B5B72DA6F6 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D190C8AD6D4E4EE082C283CF /* FontAwesome.ttf */; };
@@ -155,6 +156,7 @@
 		22E9F445BD9847528ACD8543 /* A0RNLock.xcodeproj */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = "wrapper.pb-project"; name = A0RNLock.xcodeproj; path = "../node_modules/react-native-lock/ios/A0RNLock.xcodeproj"; sourceTree = "<group>"; };
 		29678E661D784A030012FDEC /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		2AA6EB0AC57D4B3B8B0BBE1A /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		41FB89D21E38942000C1DACE /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		551468BF3F4145C373068EE4 /* Pods-client_mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client_mobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-client_mobileTests/Pods-client_mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5528A7BFF5B8A148DC00A7CC /* Pods-client_mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-client_mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-client_mobile/Pods-client_mobile.release.xcconfig"; sourceTree = "<group>"; };
 		5D32D2A9FABF426BAF17D7E9 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/react-native-vector-icons/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41FB89D31E38942000C1DACE /* libc++.tbd in Frameworks */,
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
 				794B72EF3BB7B77FF5F3926C /* libPods-client_mobileTests.a in Frameworks */,
 			);
@@ -405,6 +408,7 @@
 		B70A5FCEE16BAFE0CFFB8E5B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				41FB89D21E38942000C1DACE /* libc++.tbd */,
 				E69CCA03C3D6511F8E27189E /* libPods-client_mobile.a */,
 				F38CCA68C3CB90BD311976DC /* libPods-client_mobileTests.a */,
 			);

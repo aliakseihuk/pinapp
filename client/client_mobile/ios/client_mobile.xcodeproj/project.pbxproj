@@ -12,7 +12,7 @@
 		00C302E81ABCBA2D00DB3ED1 /* libRCTImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302C01ABCB91800DB3ED1 /* libRCTImage.a */; };
 		00C302E91ABCBA2D00DB3ED1 /* libRCTNetwork.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302DC1ABCB9D200DB3ED1 /* libRCTNetwork.a */; };
 		00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302E41ABCB9EE00DB3ED1 /* libRCTVibration.a */; };
-		129860796246E1E0D382E5D1 /* libPods-pinapp-client-mobileTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A731C302E1B164B95579723A /* libPods-pinapp-client-mobileTests.a */; };
+		00E356F31AD99517003FC87E /* client_mobileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* client_mobileTests.m */; };
 		133E29F31AD74F7200F7D852 /* libRCTLinking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C398B91ACF4ADC00677621 /* libRCTLinking.a */; };
 		139105C61AF99C1200B5F7CC /* libRCTSettings.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139105C11AF99BAD00B5F7CC /* libRCTSettings.a */; };
 		139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 139FDEF41B06529B00C62182 /* libRCTWebSocket.a */; };
@@ -22,18 +22,18 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
-		417779221E38C63300EA0637 /* libA0RNLock.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 417779211E38C61E00EA0637 /* libA0RNLock.a */; };
-		417779651E38C75900EA0637 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4177795D1E38C75900EA0637 /* Entypo.ttf */; };
-		417779661E38C75900EA0637 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4177795E1E38C75900EA0637 /* EvilIcons.ttf */; };
-		417779671E38C75900EA0637 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4177795F1E38C75900EA0637 /* FontAwesome.ttf */; };
-		417779681E38C75900EA0637 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417779601E38C75900EA0637 /* Foundation.ttf */; };
-		417779691E38C75900EA0637 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417779611E38C75900EA0637 /* Ionicons.ttf */; };
-		4177796A1E38C75900EA0637 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417779621E38C75900EA0637 /* MaterialIcons.ttf */; };
-		4177796B1E38C75900EA0637 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417779631E38C75900EA0637 /* Octicons.ttf */; };
-		4177796C1E38C75900EA0637 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 417779641E38C75900EA0637 /* Zocial.ttf */; };
+		294C31B41E39F32B00E51A32 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AA1E39F32B00E51A32 /* Entypo.ttf */; };
+		294C31B51E39F32B00E51A32 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AB1E39F32B00E51A32 /* EvilIcons.ttf */; };
+		294C31B61E39F32B00E51A32 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AC1E39F32B00E51A32 /* FontAwesome.ttf */; };
+		294C31B71E39F32B00E51A32 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AD1E39F32B00E51A32 /* Foundation.ttf */; };
+		294C31B81E39F32B00E51A32 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AE1E39F32B00E51A32 /* Ionicons.ttf */; };
+		294C31B91E39F32B00E51A32 /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31AF1E39F32B00E51A32 /* MaterialCommunityIcons.ttf */; };
+		294C31BA1E39F32B00E51A32 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31B01E39F32B00E51A32 /* MaterialIcons.ttf */; };
+		294C31BB1E39F32B00E51A32 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31B11E39F32B00E51A32 /* Octicons.ttf */; };
+		294C31BC1E39F32B00E51A32 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31B21E39F32B00E51A32 /* SimpleLineIcons.ttf */; };
+		294C31BD1E39F32B00E51A32 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 294C31B31E39F32B00E51A32 /* Zocial.ttf */; };
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
-		BC4B372B6EC5E9B53AF13698 /* libPods-pinapp-client-mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 27164C74B1DA4232C63C9AF4 /* libPods-pinapp-client-mobile.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +77,7 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = "pinapp-client-mobile";
+			remoteInfo = client_mobile;
 		};
 		139105C01AF99BAD00B5F7CC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -191,13 +191,6 @@
 			remoteGlobalIDString = 3D3CD9181DE5FBD800167DC4;
 			remoteInfo = "jschelpers-tvOS";
 		};
-		417779201E38C61E00EA0637 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4177791C1E38C61D00EA0637 /* A0RNLock.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5F0499EE1CAE9F4A006F6C05;
-			remoteInfo = A0RNLock;
-		};
 		5E9157321DD0AC6500FF2AA8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */;
@@ -235,36 +228,32 @@
 		00C302BB1ABCB91800DB3ED1 /* RCTImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTImage.xcodeproj; path = "../node_modules/react-native/Libraries/Image/RCTImage.xcodeproj"; sourceTree = "<group>"; };
 		00C302D31ABCB9D200DB3ED1 /* RCTNetwork.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTNetwork.xcodeproj; path = "../node_modules/react-native/Libraries/Network/RCTNetwork.xcodeproj"; sourceTree = "<group>"; };
 		00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = "../node_modules/react-native/Libraries/Vibration/RCTVibration.xcodeproj"; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* pinapp-client-mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pinapp-client-mobileTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* client_mobileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = client_mobileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* client_mobileTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = client_mobileTests.m; sourceTree = "<group>"; };
 		139105B61AF99BAD00B5F7CC /* RCTSettings.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTSettings.xcodeproj; path = "../node_modules/react-native/Libraries/Settings/RCTSettings.xcodeproj"; sourceTree = "<group>"; };
 		139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTWebSocket.xcodeproj; path = "../node_modules/react-native/Libraries/WebSocket/RCTWebSocket.xcodeproj"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* pinapp-client-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pinapp-client-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "pinapp-client-mobile/AppDelegate.h"; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "pinapp-client-mobile/AppDelegate.m"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* client_mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = client_mobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = client_mobile/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = client_mobile/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = "pinapp-client-mobile/Images.xcassets"; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "pinapp-client-mobile/Info.plist"; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "pinapp-client-mobile/main.m"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = client_mobile/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = client_mobile/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = client_mobile/main.m; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
-		1C1D8EA672E00FA3A16A1DFB /* Pods-pinapp-client-mobileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinapp-client-mobileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pinapp-client-mobileTests/Pods-pinapp-client-mobileTests.debug.xcconfig"; sourceTree = "<group>"; };
-		27164C74B1DA4232C63C9AF4 /* libPods-pinapp-client-mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pinapp-client-mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		39AFEE64F1C1060F015B78E5 /* Pods-pinapp-client-mobileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinapp-client-mobileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-pinapp-client-mobileTests/Pods-pinapp-client-mobileTests.release.xcconfig"; sourceTree = "<group>"; };
-		4177791C1E38C61D00EA0637 /* A0RNLock.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = A0RNLock.xcodeproj; path = "../node_modules/react-native-lock/ios/A0RNLock.xcodeproj"; sourceTree = "<group>"; };
-		4177795D1E38C75900EA0637 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
-		4177795E1E38C75900EA0637 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
-		4177795F1E38C75900EA0637 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		417779601E38C75900EA0637 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
-		417779611E38C75900EA0637 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
-		417779621E38C75900EA0637 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
-		417779631E38C75900EA0637 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
-		417779641E38C75900EA0637 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
+		294C31AA1E39F32B00E51A32 /* Entypo.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Entypo.ttf; sourceTree = "<group>"; };
+		294C31AB1E39F32B00E51A32 /* EvilIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EvilIcons.ttf; sourceTree = "<group>"; };
+		294C31AC1E39F32B00E51A32 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		294C31AD1E39F32B00E51A32 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Foundation.ttf; sourceTree = "<group>"; };
+		294C31AE1E39F32B00E51A32 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
+		294C31AF1E39F32B00E51A32 /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialCommunityIcons.ttf; sourceTree = "<group>"; };
+		294C31B01E39F32B00E51A32 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MaterialIcons.ttf; sourceTree = "<group>"; };
+		294C31B11E39F32B00E51A32 /* Octicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Octicons.ttf; sourceTree = "<group>"; };
+		294C31B21E39F32B00E51A32 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SimpleLineIcons.ttf; sourceTree = "<group>"; };
+		294C31B31E39F32B00E51A32 /* Zocial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Zocial.ttf; sourceTree = "<group>"; };
 		5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTAnimation.xcodeproj; path = "../node_modules/react-native/Libraries/NativeAnimation/RCTAnimation.xcodeproj"; sourceTree = "<group>"; };
-		76D244DFE07587DFD2EB8A58 /* Pods-pinapp-client-mobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinapp-client-mobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pinapp-client-mobile/Pods-pinapp-client-mobile.debug.xcconfig"; sourceTree = "<group>"; };
 		78C398B01ACF4ADC00677621 /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTText.xcodeproj; path = "../node_modules/react-native/Libraries/Text/RCTText.xcodeproj"; sourceTree = "<group>"; };
-		90D8DAB718ED7F95672C3FD3 /* Pods-pinapp-client-mobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pinapp-client-mobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-pinapp-client-mobile/Pods-pinapp-client-mobile.release.xcconfig"; sourceTree = "<group>"; };
-		A731C302E1B164B95579723A /* libPods-pinapp-client-mobileTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pinapp-client-mobileTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,7 +262,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				140ED2AC1D01E1AD002B40FF /* libReact.a in Frameworks */,
-				129860796246E1E0D382E5D1 /* libPods-pinapp-client-mobileTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +269,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				417779221E38C63300EA0637 /* libA0RNLock.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,
 				00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */,
@@ -293,7 +280,6 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
-				BC4B372B6EC5E9B53AF13698 /* libPods-pinapp-client-mobile.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,12 +328,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		00E356EF1AD99517003FC87E /* pinapp-client-mobileTests */ = {
+		00E356EF1AD99517003FC87E /* client_mobileTests */ = {
 			isa = PBXGroup;
 			children = (
+				00E356F21AD99517003FC87E /* client_mobileTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = "pinapp-client-mobileTests";
+			path = client_mobileTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -376,9 +363,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* pinapp-client-mobile */ = {
+		13B07FAE1A68108700A75B9A /* client_mobile */ = {
 			isa = PBXGroup;
 			children = (
+				294C31A91E39F32A00E51A32 /* Fonts */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -387,7 +375,7 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
-			name = "pinapp-client-mobile";
+			name = client_mobile;
 			sourceTree = "<group>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
@@ -405,45 +393,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4177791D1E38C61D00EA0637 /* Products */ = {
+		294C31A91E39F32A00E51A32 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				417779211E38C61E00EA0637 /* libA0RNLock.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		417779411E38C74800EA0637 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4177795C1E38C75900EA0637 /* Fonts */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		4177795C1E38C75900EA0637 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4177795D1E38C75900EA0637 /* Entypo.ttf */,
-				4177795E1E38C75900EA0637 /* EvilIcons.ttf */,
-				4177795F1E38C75900EA0637 /* FontAwesome.ttf */,
-				417779601E38C75900EA0637 /* Foundation.ttf */,
-				417779611E38C75900EA0637 /* Ionicons.ttf */,
-				417779621E38C75900EA0637 /* MaterialIcons.ttf */,
-				417779631E38C75900EA0637 /* Octicons.ttf */,
-				417779641E38C75900EA0637 /* Zocial.ttf */,
+				294C31AA1E39F32B00E51A32 /* Entypo.ttf */,
+				294C31AB1E39F32B00E51A32 /* EvilIcons.ttf */,
+				294C31AC1E39F32B00E51A32 /* FontAwesome.ttf */,
+				294C31AD1E39F32B00E51A32 /* Foundation.ttf */,
+				294C31AE1E39F32B00E51A32 /* Ionicons.ttf */,
+				294C31AF1E39F32B00E51A32 /* MaterialCommunityIcons.ttf */,
+				294C31B01E39F32B00E51A32 /* MaterialIcons.ttf */,
+				294C31B11E39F32B00E51A32 /* Octicons.ttf */,
+				294C31B21E39F32B00E51A32 /* SimpleLineIcons.ttf */,
+				294C31B31E39F32B00E51A32 /* Zocial.ttf */,
 			);
 			name = Fonts;
 			path = "../node_modules/react-native-vector-icons/Fonts";
-			sourceTree = "<group>";
-		};
-		528B7B1133DBF34E8F3F35C4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				27164C74B1DA4232C63C9AF4 /* libPods-pinapp-client-mobile.a */,
-				A731C302E1B164B95579723A /* libPods-pinapp-client-mobileTests.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		5E91572E1DD0AC6500FF2AA8 /* Products */ = {
@@ -467,7 +432,6 @@
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
-				4177791C1E38C61D00EA0637 /* A0RNLock.xcodeproj */,
 				5E91572D1DD0AC6500FF2AA8 /* RCTAnimation.xcodeproj */,
 				146833FF1AC3E56700842450 /* React.xcodeproj */,
 				00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */,
@@ -495,13 +459,10 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* pinapp-client-mobile */,
+				13B07FAE1A68108700A75B9A /* client_mobile */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				417779411E38C74800EA0637 /* Resources */,
-				00E356EF1AD99517003FC87E /* pinapp-client-mobileTests */,
+				00E356EF1AD99517003FC87E /* client_mobileTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
-				CE4ADDDA7C5A8E7F6F4711E5 /* Pods */,
-				528B7B1133DBF34E8F3F35C4 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -510,66 +471,49 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* pinapp-client-mobile.app */,
-				00E356EE1AD99517003FC87E /* pinapp-client-mobileTests.xctest */,
+				13B07F961A680F5B00A75B9A /* client_mobile.app */,
+				00E356EE1AD99517003FC87E /* client_mobileTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		CE4ADDDA7C5A8E7F6F4711E5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				76D244DFE07587DFD2EB8A58 /* Pods-pinapp-client-mobile.debug.xcconfig */,
-				90D8DAB718ED7F95672C3FD3 /* Pods-pinapp-client-mobile.release.xcconfig */,
-				1C1D8EA672E00FA3A16A1DFB /* Pods-pinapp-client-mobileTests.debug.xcconfig */,
-				39AFEE64F1C1060F015B78E5 /* Pods-pinapp-client-mobileTests.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* pinapp-client-mobileTests */ = {
+		00E356ED1AD99517003FC87E /* client_mobileTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "pinapp-client-mobileTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "client_mobileTests" */;
 			buildPhases = (
-				F4722244199F8AB69C7E3848 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
 				00E356EB1AD99517003FC87E /* Frameworks */,
 				00E356EC1AD99517003FC87E /* Resources */,
-				60E4D7EBDCC5F72E5B341D26 /* [CP] Embed Pods Frameworks */,
-				A42E621BE7DAB100D8672D44 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = "pinapp-client-mobileTests";
-			productName = "pinapp-client-mobileTests";
-			productReference = 00E356EE1AD99517003FC87E /* pinapp-client-mobileTests.xctest */;
+			name = client_mobileTests;
+			productName = client_mobileTests;
+			productReference = 00E356EE1AD99517003FC87E /* client_mobileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* pinapp-client-mobile */ = {
+		13B07F861A680F5B00A75B9A /* client_mobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "pinapp-client-mobile" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "client_mobile" */;
 			buildPhases = (
-				24E16447D5182C6B5DE73031 /* [CP] Check Pods Manifest.lock */,
 				13B07F871A680F5B00A75B9A /* Sources */,
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
-				232549B4CE71A2E9A0AA0264 /* [CP] Embed Pods Frameworks */,
-				FC57F4F26B4F240B06E6FC10 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "pinapp-client-mobile";
+			name = client_mobile;
 			productName = "Hello World";
-			productReference = 13B07F961A680F5B00A75B9A /* pinapp-client-mobile.app */;
+			productReference = 13B07F961A680F5B00A75B9A /* client_mobile.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -585,12 +529,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
-					13B07F861A680F5B00A75B9A = {
-						DevelopmentTeam = RM2BJQGCYC;
-					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "pinapp-client-mobile" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "client_mobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -602,10 +543,6 @@
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
 			projectReferences = (
-				{
-					ProductGroup = 4177791D1E38C61D00EA0637 /* Products */;
-					ProjectRef = 4177791C1E38C61D00EA0637 /* A0RNLock.xcodeproj */;
-				},
 				{
 					ProductGroup = 00C302A81ABCB8CE00DB3ED1 /* Products */;
 					ProjectRef = 00C302A71ABCB8CE00DB3ED1 /* RCTActionSheet.xcodeproj */;
@@ -653,8 +590,8 @@
 			);
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* pinapp-client-mobile */,
-				00E356ED1AD99517003FC87E /* pinapp-client-mobileTests */,
+				13B07F861A680F5B00A75B9A /* client_mobile */,
+				00E356ED1AD99517003FC87E /* client_mobileTests */,
 			);
 		};
 /* End PBXProject section */
@@ -807,13 +744,6 @@
 			remoteRef = 3DAD3EAE1DF850E9000B6D8A /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		417779211E38C61E00EA0637 /* libA0RNLock.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libA0RNLock.a;
-			remoteRef = 417779201E38C61E00EA0637 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -856,15 +786,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4177796A1E38C75900EA0637 /* MaterialIcons.ttf in Resources */,
-				4177796B1E38C75900EA0637 /* Octicons.ttf in Resources */,
-				4177796C1E38C75900EA0637 /* Zocial.ttf in Resources */,
+				294C31BB1E39F32B00E51A32 /* Octicons.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
-				417779671E38C75900EA0637 /* FontAwesome.ttf in Resources */,
-				417779661E38C75900EA0637 /* EvilIcons.ttf in Resources */,
-				417779691E38C75900EA0637 /* Ionicons.ttf in Resources */,
-				417779681E38C75900EA0637 /* Foundation.ttf in Resources */,
-				417779651E38C75900EA0637 /* Entypo.ttf in Resources */,
+				294C31B61E39F32B00E51A32 /* FontAwesome.ttf in Resources */,
+				294C31B51E39F32B00E51A32 /* EvilIcons.ttf in Resources */,
+				294C31BD1E39F32B00E51A32 /* Zocial.ttf in Resources */,
+				294C31BC1E39F32B00E51A32 /* SimpleLineIcons.ttf in Resources */,
+				294C31B81E39F32B00E51A32 /* Ionicons.ttf in Resources */,
+				294C31B71E39F32B00E51A32 /* Foundation.ttf in Resources */,
+				294C31BA1E39F32B00E51A32 /* MaterialIcons.ttf in Resources */,
+				294C31B41E39F32B00E51A32 /* Entypo.ttf in Resources */,
+				294C31B91E39F32B00E51A32 /* MaterialCommunityIcons.ttf in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -886,96 +818,6 @@
 			shellPath = /bin/sh;
 			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/packager/react-native-xcode.sh";
 		};
-		232549B4CE71A2E9A0AA0264 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinapp-client-mobile/Pods-pinapp-client-mobile-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		24E16447D5182C6B5DE73031 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		60E4D7EBDCC5F72E5B341D26 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinapp-client-mobileTests/Pods-pinapp-client-mobileTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A42E621BE7DAB100D8672D44 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinapp-client-mobileTests/Pods-pinapp-client-mobileTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F4722244199F8AB69C7E3848 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		FC57F4F26B4F240B06E6FC10 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pinapp-client-mobile/Pods-pinapp-client-mobile-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -983,6 +825,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				00E356F31AD99517003FC87E /* client_mobileTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1000,7 +843,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* pinapp-client-mobile */;
+			target = 13B07F861A680F5B00A75B9A /* client_mobile */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -1012,7 +855,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = "pinapp-client-mobile";
+			path = client_mobile;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1020,72 +863,64 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C1D8EA672E00FA3A16A1DFB /* Pods-pinapp-client-mobileTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "pinapp-client-mobileTests/Info.plist";
+				INFOPLIST_FILE = client_mobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pinapp-client-mobile.app/pinapp-client-mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/client_mobile.app/client_mobile";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39AFEE64F1C1060F015B78E5 /* Pods-pinapp-client-mobileTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = "pinapp-client-mobileTests/Info.plist";
+				INFOPLIST_FILE = client_mobileTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pinapp-client-mobile.app/pinapp-client-mobile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/client_mobile.app/client_mobile";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 76D244DFE07587DFD2EB8A58 /* Pods-pinapp-client-mobile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
-				DEVELOPMENT_TEAM = RM2BJQGCYC;
-				INFOPLIST_FILE = "pinapp-client-mobile/Info.plist";
+				INFOPLIST_FILE = client_mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.aliakseihuk.pinapp.ios;
-				PRODUCT_NAME = "pinapp-client-mobile";
+				PRODUCT_NAME = client_mobile;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 90D8DAB718ED7F95672C3FD3 /* Pods-pinapp-client-mobile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = RM2BJQGCYC;
-				INFOPLIST_FILE = "pinapp-client-mobile/Info.plist";
+				INFOPLIST_FILE = client_mobile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.github.aliakseihuk.pinapp.ios;
-				PRODUCT_NAME = "pinapp-client-mobile";
+				PRODUCT_NAME = client_mobile;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -1169,7 +1004,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "pinapp-client-mobileTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "client_mobileTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -1178,7 +1013,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "pinapp-client-mobile" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "client_mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -1187,7 +1022,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "pinapp-client-mobile" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "client_mobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

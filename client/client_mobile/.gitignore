@@ -21,7 +21,6 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-ios/Pods
 
 # Android/IntelliJ
 #
@@ -42,6 +41,9 @@ buck-out/
 android/app/libs
 *.keystore
 
+# vscode
+.vscode
+
 # fastlane
 #
 # It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
@@ -49,8 +51,6 @@ android/app/libs
 # For more information about the recommended setup visit:
 # https://github.com/fastlane/fastlane/blob/master/fastlane/docs/Gitignore.md
 
-# vscode
-.vscode
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots

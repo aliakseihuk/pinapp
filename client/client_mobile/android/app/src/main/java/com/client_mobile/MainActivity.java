@@ -1,7 +1,6 @@
 package com.client_mobile;
 
 import com.facebook.react.ReactActivity;
-import com.auth0.lock.react.LockReactPackage;
 
 public class MainActivity extends ReactActivity {
 

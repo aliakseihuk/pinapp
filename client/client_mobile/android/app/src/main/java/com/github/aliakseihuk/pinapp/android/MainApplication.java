@@ -1,4 +1,7 @@
-package com.pinapp-client-mobile;
+package com.github.aliakseihuk.pinapp.android;
+
+import com.facebook.react.BuildConfig;
+import com.facebook.react.ReactNativeHost;
 
 import android.app.Application;
 import android.util.Log;

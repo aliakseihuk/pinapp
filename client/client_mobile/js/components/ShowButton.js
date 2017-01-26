@@ -10,7 +10,6 @@ import {
 import colorscheme from '../../data/colorscheme';
 
 const ShowButton = ({style, shown, onPress}) => {
-  console.log
   let text = (shown ? 'Hide' : 'Show') + ' password';
   return (
     <TouchableOpacity style={[styles.container, style]} onPress={onPress}>
@@ -21,7 +20,6 @@ const ShowButton = ({style, shown, onPress}) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     alignItems: 'center',
     borderRadius: 4,
     padding: 10,
